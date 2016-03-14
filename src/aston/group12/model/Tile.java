@@ -9,7 +9,7 @@ public class Tile {
 	
 	private Position position;
 
-	private Tile(Position position) {
+	public Tile(Position position) {
 		this.position = position;
 	}
 	
