@@ -11,12 +11,12 @@ public class PositionTest {
 
 	@Before
 	public void setUp() throws Exception {
-		p = new Position(0,1);
+		p = new Position(2,1);
 	}
 
 	@Test
 	public void testGetX() {
-		assertEquals(0, p.getX());
+		assertEquals(2, p.getX());
 	}
 
 	@Test
