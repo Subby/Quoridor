@@ -3,6 +3,7 @@ package aston.group12.model;
 /**
  * Represents a Position in the game.
  * @author Denver Fernandes
+ * @author Anas Khan
  * @version 0.1
  */
 
