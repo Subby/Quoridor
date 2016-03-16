@@ -5,6 +5,13 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * Test class for Position.java.
+ * @author Anas Khan
+ * @version 0.1
+ */
+
+
 public class PositionTest {
 	
 	private Position p;
