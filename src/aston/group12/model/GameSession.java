@@ -19,17 +19,19 @@ public class GameSession {
 	private Board board;
 	private Statistics stats;
 	private List<Player> players;
+	private RuleType ruleType;
 	/**
 	 * A {@link Stack} was chosen to store all the moves as an undo function can be 
 	 * implemented in the practise mode. 
 	 */
 	private Deque<Move> moves;
 	
-	public GameSession(Board board) {
+	public GameSession(Board board, RuleType rule) {
 		this.board = board;
 		this.players = new ArrayList<Player>();
 		this.stats = new Statistics();
 		this.moves = new ArrayDeque<Move>();
+		this.ruleType = rule;
 	}
 	
 	/**
@@ -88,5 +90,13 @@ public class GameSession {
 	public Deque<Move> getMoves() {
 		return moves;
 	}
+	
+	/**
+	 * Gets the rule type for this particular session.
+	 * @return the rule type
+	 */
+	public RuleType getRuleType() {
+		return ruleType;
+	}	
 
 }
