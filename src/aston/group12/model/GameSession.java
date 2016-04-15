@@ -17,7 +17,6 @@ public class GameSession {
 	private static int MAX_PLAYERS = 4;
 	public static int STARTING_WALLS_NUM = 15;
 	private Board board;
-	private Statistics stats;
 	private List<Player> players;
 	private RuleType ruleType;
 	/**
@@ -29,7 +28,6 @@ public class GameSession {
 	public GameSession(Board board, RuleType rule) {
 		this.board = board;
 		this.players = new ArrayList<Player>();
-		this.stats = new Statistics();
 		this.moves = new ArrayDeque<Move>();
 		this.ruleType = rule;
 	}
@@ -78,7 +76,6 @@ public class GameSession {
 	 */
 	public boolean addMove(Move move) {
 		moves.push(move);
-		stats.incrementTotalMoves();
 		//TODO: Check for collisions etc.
 		return true;
 	}

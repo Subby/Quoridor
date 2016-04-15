@@ -12,6 +12,7 @@ public abstract class Player {
 	private String playerID;
 	private String name;
 	private Pawn pawn;
+	private Statistics stats;
 	private int walls;
 	
 	/**
@@ -27,6 +28,7 @@ public abstract class Player {
 		//Initialise values.
 		this.name = name;
 		this.pawn = pawn;
+		this.stats = new Statistics();
 	}
 
 	/**
@@ -69,5 +71,13 @@ public abstract class Player {
 			throw new IllegalStateException("The number of walls cannot be decremented below 0");
 		}
 		walls--;
+	}
+	
+	/**
+	 * Gets the {@link Statistics} of this player.
+	 * @return the statistics
+	 */
+	public Statistics getStats() {
+		return stats;
 	}
 }
