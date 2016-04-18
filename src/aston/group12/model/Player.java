@@ -73,6 +73,17 @@ public abstract class Player {
 		walls--;
 	}
 	
+	
+	/**
+	 * Increments the number of walls that a player has by one.
+	 */
+	public void incrementWalls() {
+		if(walls == GameSession.STARTING_WALLS_NUM) {
+			throw new IllegalStateException("The number of walls are already at maximum.");
+		}
+		walls++;
+	}
+	
 	/**
 	 * Gets the {@link Statistics} of this player.
 	 * @return the statistics
