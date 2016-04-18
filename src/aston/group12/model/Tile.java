@@ -1,31 +1,34 @@
 package aston.group12.model;
 
 /**
- * Represents a tile.
+ * Represents a Tile on the {@link Board}
  * @author Denver Fernandes
- * @version 0.1
+ * @author Anas Khan
+ * @version 0.3
  */
 public class Tile {
 	
-	private Position position;
+	private int x;
+	private int y;
 
-	public Tile(Position position) {
-		this.position = position;
+	public Tile(int x, int y) {
+		this.x = x;
+		this.y = y;
 	}
 	
 	/**
-	 * Gets the {@link Position} of this {@link Tile}
-	 * @return the position
+	 * Gets the x position of this tile
+	 * @return the x position of the tile
 	 */
-	public Position getPosition() {
-		return position;
+	public int getX() {
+		return x;
 	}
 
 	/**
-	 * Sets the {@link Position} of this {@link Tile}
-	 * @param position the {@link Position} to set
+	 * Gets the y position of this tile
+	 * @return the y position of the tile
 	 */
-	public void setPosition(Position position) {
-		this.position = position;
+	public int getY() {
+		return y;
 	}
 }
