@@ -9,7 +9,6 @@ public class HumanPlayerTest {
 
 	private Position position;
 	private Tile tile;
-	private Pawn pawn;
 	private HumanPlayer player;
 	
 	/**
@@ -19,11 +18,8 @@ public class HumanPlayerTest {
 	@Before
 	public void setUp() throws Exception {
 		position = new Position(2,1);
-		tile = new Tile(position);
-		pawn = new Pawn();		
-		pawn.setTile(tile);
-		
-		player = new HumanPlayer("TestPlayer", pawn);
+		tile = new Tile(position);		
+		player = new HumanPlayer("TestPlayer");
 	}
 	
 	/**
@@ -34,13 +30,5 @@ public class HumanPlayerTest {
 		assertEquals("TestPlayer", player.getName());
 	}
 	
-	/**
-	 * Tests getPawn method.
-	 */
-	@Test
-	public void TestGetPawn() {
-		assertEquals(2, player.getPawn().getTile().getPosition().getX());
-		assertEquals(1, player.getPawn().getTile().getPosition().getY());
-	}
 	
 }

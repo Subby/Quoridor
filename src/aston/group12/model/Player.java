@@ -6,12 +6,11 @@ import java.util.UUID;
  * Represents a Player in the game.
  * @author Xenia Vanikaki
  * @author Denver Fernandes
- * @version 0.1
+ * @version 0.2
  */
 public abstract class Player {
 	private String playerID;
 	private String name;
-	private Pawn pawn;
 	private Statistics stats;
 	private int walls;
 	
@@ -21,13 +20,12 @@ public abstract class Player {
 	 * @param name
 	 * @param pawn
 	 */
-	public Player(String name, Pawn pawn){
+	public Player(String name){
 		//Generate UUID
 		playerID = UUID.randomUUID().toString();
 		walls = GameSession.STARTING_WALLS_NUM;
 		//Initialise values.
 		this.name = name;
-		this.pawn = pawn;
 		this.stats = new Statistics();
 	}
 
@@ -45,14 +43,6 @@ public abstract class Player {
 	 */
 	public String getName() {
 		return name;
-	}
-
-	/**
-	 * Gets the {@link Pawn} associated with the player.
-	 * @return the pawn
-	 */
-	public Pawn getPawn() {
-		return pawn;
 	}
 	
 	/**
