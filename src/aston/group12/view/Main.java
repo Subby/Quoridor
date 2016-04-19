@@ -272,10 +272,10 @@ public class Main extends Application {
         						System.out.println("No wall here");
         						return;        						
         					}
-        					if(gameSession.getBoard().getWall(thisX, thisY, false).getPlacedBy() == gameSession.getPlayer(turnIndex)) {
+        					if(gameSession.getBoard().getWall(thisX, thisY, true).getPlacedBy() == gameSession.getPlayer(turnIndex)) {
         						System.out.println("You cannot remove your own walls.");
-        						return;
-        					}        					
+        						return;        						
+        					}       					
         					if(gameSession.getBoard().getWall(thisX, thisY, true).getIsFirst()) {
                 				if(nextWallX >= 0 && nextWallX <= width) {
                     				horizontalWalls[nextWallX][nextWallY].setFill(Color.rgb(153, 217, 234, 0.8));
