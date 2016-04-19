@@ -7,7 +7,6 @@ import org.junit.Test;
 
 public class HumanPlayerTest {
 
-	private Position position;
 	private Tile tile;
 	private HumanPlayer player;
 	
@@ -17,7 +16,6 @@ public class HumanPlayerTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		position = new Position(2,1);
 		tile = new Tile(2, 5);		
 		player = new HumanPlayer("TestPlayer");
 	}
