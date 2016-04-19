@@ -30,7 +30,7 @@ public class Board {
 	}
 
 	/**
-	 * Assigns {@link Position}s to the tiles.
+	 * Assigns coordinates to the {@link Tiles tiles}.
 	 */
 	public void setTilePositions() {
 

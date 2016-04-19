@@ -18,7 +18,7 @@ public class Move {
 	}
 	
 	/**
-	 * Gets the {@link Position} the player moved from.
+	 * Gets the {@link Tile} the player moved from.
 	 * @return the position the player moved from
 	 */
 	public Tile getFrom() {
@@ -26,7 +26,7 @@ public class Move {
 	}
 	
 	/**
-	 * Gets the {@link Position} the player moved to.
+	 * Gets the {@link Tile} the player moved to.
 	 * @return the position the player moved to
 	 */
 	public Tile getTo() {
