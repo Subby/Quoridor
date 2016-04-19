@@ -14,7 +14,7 @@ import java.util.Stack;
  */
 public class GameSession {
 	
-	private static int MAX_PLAYERS = 4;
+	public static int MAX_PLAYERS = 4;
 	public static int STARTING_WALLS_NUM = 15;
 	private Board board;
 	private List<Player> players;
