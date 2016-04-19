@@ -21,6 +21,9 @@ public class Board {
 	}
 	
 	public Board(int height, int width) {
+		if((height % 2 == 0) || (width % 2 == 0)) {
+			throw new IllegalStateException("Height or width of the board cannot be even.");
+		}		
 		this.tiles = new Tile[height][width];
 		this.height = height;
 		this.width = width;
