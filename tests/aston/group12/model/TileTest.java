@@ -13,27 +13,21 @@ import org.junit.Test;
 
 public class TileTest {
 
-	private Position p;
 	private Tile t;
 
 	@Before
 	public void setUp() throws Exception {
-		p = new Position(0,1);
-		t = new Tile(p);
+		t = new Tile(2, 5);
 	}
 
 	@Test
-	public void testGetPosition() {
-		assertEquals(0, t.getPosition().getX());
-		assertEquals(1, t.getPosition().getY());
+	public void testGetX() {
+		assertEquals(2, t.getX());
 	}
 
 	@Test
-	public void testSetPosition() {
-		Position dest = new Position(-1,10);		
-		t.setPosition(dest);
-		assertEquals(-1, t.getPosition().getX());
-		assertEquals(10, t.getPosition().getY());
+	public void testGetY() {
+		assertEquals(5, t.getY());
 	}
 
 }
