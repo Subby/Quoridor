@@ -37,11 +37,13 @@ public class Board {
 	}
 	
 	/**
-	 * Gets all the {@link Tile}s.
-	 * @return the tiles
+	 * Gets a tile with a given coordinate.
+	 * @param x the x coordinate
+	 * @param y the y coordinate
+	 * @return the tile
 	 */
-	public Tile[][] getTiles() {
-		return tiles;
+	public Tile getTile(int x, int y) {
+		return tiles[x][y];
 	}
 	
 	
