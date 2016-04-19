@@ -95,5 +95,50 @@ public class GameSession {
 	public RuleType getRuleType() {
 		return ruleType;
 	}	
+	
+	/**
+	 * Checks whether a move is valid.
+	 * @param current the current {@link Tile} the {@link Player} is at.
+	 * @param movingTo the {@link Tile} the {@link Player} wants to move to. 
+	 * @return whether the move is valid
+	 */
+	public boolean isValidMove(Tile current, Tile movingTo) {
+		int currentX = current.getX();
+		int currentY = current.getY();
+		int nextX = movingTo.getX();
+		int nextY = movingTo.getY();
+    	if(nextX >= board.getWidth() || nextY >= board.getHeight() || nextX < 0 || nextY < 0) { //Check if the new position is off the board
+    		return false;
+    	}		
+    	if(nextX == currentX) {
+    		if(nextY == currentY - 1) { //going upwards
+    			if(board.containsWall(currentX, currentY, true)) {
+    				return false;
+    			}
+    			return true;
+    		}
+    		if(nextY == currentY + 1) { //going downwards
+    			if(board.containsWall(currentX, currentY+1, true)) {
+    				return false;
+    			}
+    			return true;    			
+    		}
+    	}
+    	if(nextY == currentY) {
+    		if(nextX == currentX - 1) { //going left
+    			if(board.containsWall(currentX-1, currentY, false)) {
+    				return false;
+    			}  		
+    			return true;
+    		}
+    		if(nextX == currentX + 1) { //going right
+    			if(board.containsWall(currentX, currentY, false)) {
+    				return false;
+    			}
+    			return true;
+    		}
+    	}
+    	return false;
+	}	
 
 }
