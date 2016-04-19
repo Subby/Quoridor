@@ -66,7 +66,7 @@ public class GameSession {
 	 * @return the player
 	 */
 	public Player getPlayer(int id) {
-		return players.get(id - 1);
+		return players.get(id);
 	}
 	
 	/**
