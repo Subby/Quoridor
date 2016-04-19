@@ -7,38 +7,48 @@ package aston.group12.model;
  */
 public class Wall {
 	
-	private Position from;
-	private Position to;
-	private boolean isHorizontal;
+	private int x;
+	private int y;
+	private boolean isFirst;
+	private Player placedBy;
 	
-	public Wall(Position from, Position to, boolean horizontal) {
-		this.from = from;
-		this.to = to;
-		this.isHorizontal = horizontal;
+	public Wall(int x, int y, boolean isFirst, Player placedBy) {
+		this.x = x;
+		this.y = y;
+		this.isFirst = isFirst;
+		this.placedBy = placedBy;
 	}
 	
 	/**
-	 * Gets the starting position of the wall.
+	 * Gets the starting position of the {@link Wall}.
 	 * @return the starting position
 	 */
-	public Position getFrom() {
-		return from;
+	public int getX() {
+		return x;
 	}
 
 	/**
-	 * Gets the ending position of the wall.
+	 * Gets the ending position of the {@link Wall}.
 	 * @return the ending position
 	 */
-	public Position getTo() {
-		return to;
+	public int getY() {
+		return y;
 	}
 	
 	/**
-	 * Whether the wall is horizontal or vertical.
-	 * @return whether the wall is horizontal
+	 * Gets whether this is the first part of the {@link Wall}.
+	 * @return whether this is the first part
 	 */
-	public boolean isHorizontal() {
-		return isHorizontal;
+	public boolean getIsFirst() {
+		return isFirst;
+	}
+	
+	/**
+	 * Gets the {@link Player} who placed the wall.
+	 * @return the player who placed the wall
+	 */
+	public Player getPlacedBy() {
+		return placedBy;
 	}
 		
 }

@@ -7,36 +7,41 @@ import org.junit.Test;
 
 public class WallTest {
 	
-	private Wall w;
-	private Position from;
-	private Position to;
-	private boolean isHorizontal;
+	private Wall wall;
+	private Wall otherWall;
+	private Player p1;
+	private Player p2;
 
 	@Before
 	public void setUp() throws Exception {
-		from = new Position(0,2);
-		to = new Position(2,2);
-		isHorizontal = true;
-		w = new Wall(from, to, isHorizontal);
+		p1 = new HumanPlayer("Steve");
+		p2 = new HumanPlayer("Austin");
+		wall = new Wall(4, 5, true, p1);
+		otherWall = new Wall(8, 9, false, p2);
 	}
 
 	@Test
-	public void testGetFrom() {
-		assertEquals(0,from.getX());
-		assertEquals(2,from.getY());
+	public void testGetX() {
+		assertEquals(4, wall.getX());
+		assertEquals(8, otherWall.getX());
 	}
 
 	@Test
-	public void testGetTo() {
-		assertEquals(2,to.getX());
-		assertEquals(2,to.getY());
+	public void testGetY() {
+		assertEquals(5, wall.getY());
+		assertEquals(9, otherWall.getY());
 	}
 
 	@Test
-	public void testIsHorizontal() {
-		assertTrue(w.isHorizontal());
-		Wall w2 = new Wall(from, to, false);
-		assertFalse(w2.isHorizontal());
+	public void testGetIsFirst() {
+		assertTrue(wall.getIsFirst());
+		assertFalse(otherWall.getIsFirst());
 	}
+	
+	@Test
+	public void getPlacedBy() {
+		assertEquals(p1.getName(), wall.getPlacedBy().getName());
+		assertEquals(p2.getName(), otherWall.getPlacedBy().getName());
+	}	
 
 }

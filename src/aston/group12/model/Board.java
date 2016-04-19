@@ -6,12 +6,13 @@ import java.util.List;
 /**
  * Represents a board filled with tiles.
  * @author Denver Fernandes
- * @version 0.4
+ * @version 0.5
  */
 public class Board {
 	
 	private Tile[][] tiles;
-	private List<Wall> walls;
+	private Wall[][] horizontalWalls;
+	private Wall[][] verticalWalls;
 	private int height;
 	private int width;
 
@@ -21,7 +22,8 @@ public class Board {
 	
 	public Board(int height, int width) {
 		this.tiles = new Tile[height][width];
-		this.walls = new ArrayList<Wall>();
+		this.height = height;
+		this.width = width;
 		this.height = height;
 		this.width = width;
 		setTilePositions();
@@ -44,27 +46,62 @@ public class Board {
 	
 	
 	/**
-	 * Checks whether the position on the obard contains a {@link Wall}
+	 * Checks whether the position on the {@link Board} contains a {@link Wall}.
 	 * @param position the position
 	 * @return the wall
 	 */
-    public boolean containsWall(Position position) {
-        for(Wall wall : walls) {
-        	if(position.equals(wall.getFrom())) {
-        		return true;
-        	}
-        }
+    public boolean containsWall(int x, int y, boolean isHorizontal) {
+    	if(isHorizontal) {
+    		if(horizontalWalls[x][y] != null) {
+    			return true;
+    		}
+    	} else {
+    		if(verticalWalls[x][y] != null) {
+    			return true;
+    		}    		
+    	}
     	return false;
     }
 
     /**
-     * Places a wall on the board.
-     * @param position the position
-     * @param wall the wall
+     * Places a new {@link Wall} on to the {@link Board}.
+     * @param x the x position
+     * @param y the y position
+     * @param isHorizontal whether the wall is horizontal or not
+     * @param isFirst whether the wall is the first part or not
+     * @param placedBy who owns the wall
      */
-    public void setWall(Wall wall) {
-        walls.add(wall);
+    public void setWall(int x, int y, boolean isHorizontal, boolean isFirst, Player placedBy) {
+        if(isHorizontal) {
+        	horizontalWalls[x][y] = new Wall(x, y, isFirst, placedBy);
+        } else {
+        	verticalWalls[x][y] = new Wall(x, y, isFirst, placedBy);
+        }
     }
+    
+    /**
+     * Returns a {@link Wall} given the x and y coordinate.
+     * @param x the x coordinate
+     * @param y the y coordinate
+     * @param isHorizontal whether the wall is horizontal
+     * @return the wall
+     */
+    public Wall getWall(int x, int y, boolean isHorizontal) {
+    	if(isHorizontal) {
+    		return horizontalWalls[x][y];
+    	} else {
+    		return verticalWalls[x][y];
+    	}
+    }
+    
+    public void removeWall(int x, int y, boolean isHorizontal) {
+    	if(isHorizontal) {
+    		horizontalWalls[x][y] = null;
+    	} else {
+    		verticalWalls[x][y] = null;
+    	}
+    }
+    
 	/**
 	 * Gets the height of the board. Used to draw the board.
 	 * @return the height
