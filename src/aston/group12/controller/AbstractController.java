@@ -21,7 +21,7 @@ public abstract class AbstractController {
 	 */
 	protected void loadScreen(Stage primaryStage, String layoutFile){
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/layouts/" + layoutFile));
+			Parent root = FXMLLoader.load(getClass().getResource("/resources/layouts/" + layoutFile));
 			Scene scene = new Scene(root);
 			primaryStage.setTitle("Quoridor");
 			primaryStage.getIcons().add(new Image("resources/icons/favicon.png"));

@@ -22,7 +22,7 @@ public class MainMenu extends Application implements GameScreen {
 	@Override
 	public void start(Stage primaryStage){
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("layouts/mainmenu.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/resources/layouts/mainmenu.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setTitle("Quoridor");
 			primaryStage.getIcons().add(new Image("resources/icons/favicon.png"));
