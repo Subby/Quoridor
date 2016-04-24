@@ -112,7 +112,7 @@ public class SetupController extends AbstractController implements Initializable
 
     	// Request focus on the username field by default.
     	Platform.runLater(() -> name.requestFocus());
-    	
+    	Optional<Pair<String, String>> result = popup.showAndWait();
     	String hexColor = convertColour(colorPicker);
     	System.out.println(colorPicker.getValue().toString());
     	if(!name.getText().isEmpty() && !hexColor.isEmpty()) {
