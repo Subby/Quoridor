@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aston.group12.controller.SettingsController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+        <tabs>
+          <Tab text="Main">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="104.0" prefWidth="587.0">
+                     <children>
+                        <Button layoutX="36.0" layoutY="232.0" mnemonicParsing="false" text="Reset to Default" />
+                        <Button layoutX="460.0" layoutY="232.0" mnemonicParsing="false" text="Cancel" />
+                        <Button layoutX="537.0" layoutY="232.0" mnemonicParsing="false" text="Save" />
+                        <Text layoutX="81.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="54.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 1" />
+                        <Text layoutX="463.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 4" />
+                        <Text layoutX="182.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 2" />
+                        <Text layoutX="319.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 3" />
+                        <CheckBox layoutX="54.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
+                        <CheckBox layoutX="182.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
+                        <CheckBox layoutX="319.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
+                        <CheckBox layoutX="463.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="14.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/red_line.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="519.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/accept_button.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="31.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/panel.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="157.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/awstats.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="292.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/border_color.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="444.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/cash_stack.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="436.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/cancel.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Advanced">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="104.0" prefWidth="587.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+                        <Button layoutX="36.0" layoutY="232.0" mnemonicParsing="false" text="Reset to Default" />
+                        <Button layoutX="460.0" layoutY="232.0" mnemonicParsing="false" text="Cancel" />
+                        <Button layoutX="537.0" layoutY="232.0" mnemonicParsing="false" text="Save" />
+                        <Text layoutX="81.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="54.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 1" />
+                        <Text layoutX="463.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 4" />
+                        <Text layoutX="182.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 2" />
+                        <Text layoutX="319.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 3" />
+                        <CheckBox layoutX="54.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
+                        <CheckBox layoutX="182.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
+                        <CheckBox layoutX="319.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
+                        <CheckBox layoutX="463.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="14.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/red_line.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="519.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/accept_button.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="31.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/panel.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="157.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/awstats.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="292.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/border_color.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="444.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/cash_stack.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="436.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings/cancel.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Text layoutX="258.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="486.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/settings/arrow_left.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="527.0" layoutY="37.0" mnemonicParsing="false" onAction="#onBackBtn" text="Back" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="28.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/main/setting_tools.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
