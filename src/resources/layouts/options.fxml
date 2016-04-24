@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.image.Image?>
@@ -11,6 +12,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -20,32 +22,31 @@
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+    <RowConstraints />
+    <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="4">
         <tabs>
           <Tab text="Main">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="104.0" prefWidth="587.0">
                      <children>
-                        <Button layoutX="36.0" layoutY="232.0" mnemonicParsing="false" text="Reset to Default" />
-                        <Button layoutX="460.0" layoutY="232.0" mnemonicParsing="false" text="Cancel" />
-                        <Button layoutX="537.0" layoutY="232.0" mnemonicParsing="false" text="Save" />
-                        <Text layoutX="81.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main">
+                        <Button layoutX="36.0" layoutY="232.0" mnemonicParsing="false" onAction="#onResetBtn" text="Reset to Default" />
+                        <Button layoutX="537.0" layoutY="232.0" mnemonicParsing="false" onAction="#onSaveBtn" text="Save" />
+                        <Text layoutX="98.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <Text layoutX="54.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 1" />
-                        <Text layoutX="463.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 4" />
-                        <Text layoutX="182.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 2" />
-                        <Text layoutX="319.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 3" />
-                        <CheckBox layoutX="54.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
-                        <CheckBox layoutX="182.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
-                        <CheckBox layoutX="319.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
-                        <CheckBox layoutX="463.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
+                        <Text accessibleText="Whether to show help when moving pawn" fill="#b2acac" layoutX="499.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ghost Trail" />
+                        <Text accessibleText="The number of walls to be available per player" layoutX="172.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Walls" />
+                        <Text accessibleText="Whether to show names aboves pawns" layoutX="322.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Show Name Labels" />
+                        <CheckBox fx:id="indicateLabel" layoutX="300.0" layoutY="143.0" mnemonicParsing="false" selected="true" text="Enabled" />
+                        <CheckBox disable="true" layoutX="495.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
                         <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="14.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/settings/red_line.png" />
@@ -56,31 +57,22 @@
                               <Image url="@images/settings/accept_button.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="31.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="21.0" layoutY="23.0">
+                           <image>
+                              <Image url="@images/settings/main_opts.png" />
+                           </image>
+                        </ImageView>
+                        <Ellipse fill="RED" layoutX="309.0" layoutY="120.0" radiusX="9.0" radiusY="9.0" stroke="#f20101" strokeType="INSIDE" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a17c0b" height="22.0" layoutX="152.0" layoutY="110.0" stroke="TRANSPARENT" strokeType="INSIDE" width="9.0" />
+                        <Ellipse fill="#ff000022" layoutX="486.0" layoutY="118.0" radiusX="9.0" radiusY="9.0" stroke="#f20101" strokeType="INSIDE" />
+                        <Text accessibleHelp="The rule type to be used in game" accessibleText="The rule type to be used in game" layoutX="30.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Rule Type" />
+                        <ChoiceBox fx:id="ruleBox" layoutX="31.0" layoutY="139.0" prefHeight="18.0" prefWidth="85.0" />
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="6.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/settings/panel.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="157.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/settings/awstats.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="292.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/settings/border_color.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="444.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/settings/cash_stack.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="436.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/settings/cancel.png" />
-                           </image>
-                        </ImageView>
+                        <ChoiceBox fx:id="wallBox" layoutX="172.0" layoutY="139.0" prefHeight="18.0" prefWidth="85.0" />
                      </children>
                   </AnchorPane>
             </content>
@@ -89,23 +81,14 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="104.0" prefWidth="587.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
-                        <Button layoutX="36.0" layoutY="232.0" mnemonicParsing="false" text="Reset to Default" />
-                        <Button layoutX="460.0" layoutY="232.0" mnemonicParsing="false" text="Cancel" />
-                        <Button layoutX="537.0" layoutY="232.0" mnemonicParsing="false" text="Save" />
-                        <Text layoutX="81.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main">
+                        <Button layoutX="36.0" layoutY="232.0" mnemonicParsing="false" onAction="#onResetBtn" text="Reset to Default" />
+                        <Button layoutX="537.0" layoutY="232.0" mnemonicParsing="false" onAction="#onSaveBtn" text="Save" />
+                        <Text layoutX="101.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Advanced">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <Text layoutX="54.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 1" />
-                        <Text layoutX="463.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 4" />
-                        <Text layoutX="182.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 2" />
-                        <Text layoutX="319.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 3" />
-                        <CheckBox layoutX="54.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
-                        <CheckBox layoutX="182.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
-                        <CheckBox layoutX="319.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
-                        <CheckBox layoutX="463.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
+                        <Text layoutX="203.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board Size" />
                         <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="14.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/settings/red_line.png" />
@@ -116,38 +99,36 @@
                               <Image url="@images/settings/accept_button.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="31.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="172.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/settings/panel.png" />
+                              <Image url="@images/settings/board_game.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="157.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="327.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/settings/awstats.png" />
+                              <Image url="@images/settings/large_tiles.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="292.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="62.0" fitWidth="78.0" layoutX="15.0" layoutY="20.0">
                            <image>
-                              <Image url="@images/settings/border_color.png" />
+                              <Image url="@images/settings/adv_opts.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="444.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/settings/cash_stack.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="436.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/settings/cancel.png" />
-                           </image>
-                        </ImageView>
+                        <Text layoutX="349.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tile Size" />
+                        <ChoiceBox fx:id="boardBox" layoutX="188.0" layoutY="147.0" prefHeight="25.0" prefWidth="85.0" />
+                        <ChoiceBox fx:id="tileBox" layoutX="328.0" layoutY="147.0" prefHeight="25.0" prefWidth="85.0" />
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
+            <Tab disable="true" text="Tournament">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
         </tabs>
       </TabPane>
-      <Pane prefHeight="200.0" prefWidth="200.0">
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
          <children>
             <Text layoutX="258.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
                <font>
