@@ -46,6 +46,8 @@ public class Main extends Application {
     private Group verticalWallGroup = new Group();
     private Label currentTurnLabel;
     private Label wallsLabel;
+    private Scene scene;
+    
     @Override
     public void start(Stage primaryStage) throws Exception {
     	setupModel();
@@ -54,6 +56,14 @@ public class Main extends Application {
         primaryStage.setTitle("Quoridor");
         primaryStage.setScene(scene);
         primaryStage.show();        
+    }
+    public Main(Stage stage) {
+    	setupModel();
+    	scene = new Scene(createContent());
+        stage.getIcons().add(new Image("res/icons/favicon.png"));
+        stage.setTitle("Quoridor");
+        stage.setScene(scene);
+        stage.show();     	
     }
     
     private void setupModel() {
@@ -77,6 +87,7 @@ public class Main extends Application {
         setupPawns();
         turnIndex = 0;
     }
+    
     private Pane infoPanel() {
     	Pane panel = new Pane();
     	currentTurnLabel.setText(gameSession.getPlayer(turnIndex).getName() + "'s turn");
