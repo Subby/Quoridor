@@ -14,8 +14,8 @@ public class WallTest {
 
 	@Before
 	public void setUp() throws Exception {
-		p1 = new HumanPlayer("Steve");
-		p2 = new HumanPlayer("Austin");
+		p1 = new HumanPlayer("Steve", "#ffffff");
+		p2 = new HumanPlayer("Austin", "#ffffff");
 		wall = new Wall(4, 5, true, p1);
 		otherWall = new Wall(8, 9, false, p2);
 	}

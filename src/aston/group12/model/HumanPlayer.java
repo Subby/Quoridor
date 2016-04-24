@@ -11,8 +11,8 @@ package aston.group12.model;
 
 public class HumanPlayer extends Player {
 
-	public HumanPlayer(String name) {
-		super(name);
+	public HumanPlayer(String name, String pawnColour) {
+		super(name, pawnColour);
 	}
 	
 }

@@ -66,10 +66,10 @@ public class Main extends Application {
         verticalWalls = new VerticalWallComponent[board.getWidth()][board.getHeight()];
         currentTurnLabel = new Label();
         wallsLabel = new Label();
-        HumanPlayer player1 = new HumanPlayer("Levi");
-        HumanPlayer player2 = new HumanPlayer("Stevie");
-        HumanPlayer player3 = new HumanPlayer("Outre");
-        HumanPlayer player4 = new HumanPlayer("Lance");
+        HumanPlayer player1 = new HumanPlayer("Levi", "#CC3333");
+        HumanPlayer player2 = new HumanPlayer("Stevie", "#5233CC");
+        HumanPlayer player3 = new HumanPlayer("Outre", "#238500");
+        HumanPlayer player4 = new HumanPlayer("Lance", "#FF00FF");
         gameSession.addPlayer(player1);
         gameSession.addPlayer(player2);
         gameSession.addPlayer(player3);
