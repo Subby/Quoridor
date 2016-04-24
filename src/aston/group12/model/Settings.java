@@ -19,18 +19,7 @@ public class Settings {
 	
 	
 	private Settings() {
-		setRuleType(RuleType.STANDARD);
-		//Set number of walls setting
-		setWalls(10);
-		//Set show label
-		setShowLabels(true);
-		//Set show ghost trails
-		setShowTrail(true);
-		//Set board size
-		setBoardHeight(9);
-		setBoardWidth(9);
-		//Set tile size
-		setTileSize(50);		
+		reset();
 	}
 	
 	/**
@@ -51,7 +40,25 @@ public class Settings {
 	public RuleType getRuleType() {
 		return ruleType;
 	}
-
+	
+	/**
+	 * Resets all the {@link Setting settings} to default.
+	 */
+	public void reset() {
+		setRuleType(RuleType.STANDARD);
+		//Set number of walls setting
+		setWalls(10);
+		//Set show label
+		setShowLabels(true);
+		//Set show ghost trails
+		setShowTrail(true);
+		//Set board size
+		setBoardHeight(9);
+		setBoardWidth(9);
+		//Set tile size
+		setTileSize(50);			
+	}
+	
 	/**
 	 * Sets the {@link RuleType}.
 	 * @param ruleType the rule type
