@@ -73,6 +73,7 @@ public class SetupController extends AbstractController implements Initializable
     
     /**
      * Action triggered by pressing the add player button.
+     * Adapted from <a href="http://code.makery.ch/blog/javafx-dialogs-official/">Makery</a>.
      * @param event the action
      */
     @FXML
@@ -111,7 +112,7 @@ public class SetupController extends AbstractController implements Initializable
 
     	// Request focus on the username field by default.
     	Platform.runLater(() -> name.requestFocus());
-
+    	
     	String hexColor = convertColour(colorPicker);
     	System.out.println(colorPicker.getValue().toString());
     	if(!name.getText().isEmpty() && !hexColor.isEmpty()) {
