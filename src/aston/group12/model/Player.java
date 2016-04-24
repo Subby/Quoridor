@@ -1,9 +1,5 @@
 package aston.group12.model;
 
-import java.util.UUID;
-
-import javafx.scene.paint.Color;
-
 /**
  * Represents a Player in the game.
  * @author Xenia Vanikaki
@@ -11,7 +7,6 @@ import javafx.scene.paint.Color;
  * @version 0.1
  */
 public abstract class Player {
-	private String playerID;
 	private String name;
 	private int walls;
 	private Statistics stats;
@@ -25,7 +20,6 @@ public abstract class Player {
 	 */
 	public Player(String name, String pawnColour){
 		//Generate UUID
-		playerID = UUID.randomUUID().toString();
 		
 		//Initialise values.
 		this.name = name;
@@ -34,13 +28,6 @@ public abstract class Player {
 		this.pawnColour = pawnColour;
 	}
 
-	/**
-	 * Gets the ID of the player.
-	 * @return the playerID
-	 */
-	public String getPlayerID() {
-		return playerID;
-	}
 
 	/**
 	 * Gets the name of the player.

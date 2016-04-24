@@ -2,10 +2,13 @@ package aston.group12.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-
+/**
+ * 
+ * Handles setting actions.
+ *
+ */
 public class SettingsController extends AbstractController {
 	
 	

@@ -9,7 +9,10 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
-
+/**
+ * Handles Main Menu actions.
+ *
+ */
 public class MainMenuController extends AbstractController {
 	
 	@FXML

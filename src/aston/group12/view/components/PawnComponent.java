@@ -9,7 +9,11 @@ import javafx.scene.text.Text;
 
 import static aston.group12.view.Main.TILE_SIZE;
 
-
+/**
+ * 
+ * Creates a {@link StackPane} representation of a Pawn.
+ *
+ */
 public class PawnComponent extends StackPane {
 	
 	private PawnType type;
@@ -17,14 +21,26 @@ public class PawnComponent extends StackPane {
 	private double mouseX, mouseY;
 	private double oldX, oldY;
 	
+	/**
+	 * Gets the {@link PawnType}.
+	 * @return the pawn type.
+	 */
 	public PawnType getType() {
 		return type;
 	}
 	
+	/**
+	 * Gets the old x coordinate.
+	 * @return the old x coordinate
+	 */
 	public double getOldX() {
 		return oldX;
 	}
 	
+	/**
+	 * Gets the old y coordinate.
+	 * @return the old y coordinate
+	 */
 	public double getOldY() {
 		return oldY;
 	}
@@ -33,14 +49,7 @@ public class PawnComponent extends StackPane {
 		this.type = type;
 		
 		move(x, y);
-		
-        /*Ellipse bg = new Ellipse(TILE_SIZE * 0.3125, TILE_SIZE * 0.26);
-        bg.setFill(Color.BLACK);
-        bg.setStrokeWidth(TILE_SIZE * 0.03);
-        
-        bg.setTranslateX((TILE_SIZE - TILE_SIZE * 0.3125) / 2);
-        bg.setTranslateY((TILE_SIZE - TILE_SIZE * 0.26 * 2) / 2 + TILE_SIZE * 0.07);*/        
-        
+		      
         Ellipse ellipse = new Ellipse(TILE_SIZE * 0.3215, TILE_SIZE * 0.26);
         ellipse.setFill(Color.valueOf(type.getColour()));
         ellipse.setStroke(Color.BLACK);
@@ -66,12 +75,20 @@ public class PawnComponent extends StackPane {
         });
 	}
 	
+	/**
+	 * Moves a pawn to a new location
+	 * @param x the x coordinate
+	 * @param y the y coodinate
+	 */
 	public void move(int x, int y) {
 		oldX = x * TILE_SIZE;
 		oldY = y * TILE_SIZE;
 		relocate(oldX, oldY);
 	}
 	
+	/**
+	 * Reverses a move. Used when the attempted move is not valid.
+	 */
 	public void reverseMove() {
 		relocate(oldX, oldY);
 	}
@@ -88,10 +105,18 @@ public class PawnComponent extends StackPane {
 
 	    }
 	    
+	    /**
+	     * Gets the {@link Color}.
+	     * @return the colour
+	     */
 	    public String getColour() {
 	    	return colour;
 	    }
 	    
+	    /**
+	     * Gets the wall {@link Color}.
+	     * @return the wall colour
+	     */
 	    public Color getWallColour() {
 	    	return wallColour;
 	    }

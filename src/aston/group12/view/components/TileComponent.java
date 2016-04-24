@@ -4,6 +4,11 @@ import aston.group12.view.Main;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * 
+ * Represents a tile component.
+ *
+ */
 public class TileComponent extends Rectangle {
     
 	private PawnComponent pawn;

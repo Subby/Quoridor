@@ -26,7 +26,11 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-
+/**
+ * 
+ * The main game.
+ *
+ */
 public class Main extends Application {
 	public static final int TILE_SIZE = 50;
 

@@ -4,11 +4,13 @@ import aston.group12.view.Main;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * Represents a horizontal wall component within the board using the {@link Rectangle} shape.
+ */
 public class HorizontalWallComponent extends Rectangle {
 	
 
 	public HorizontalWallComponent(int x, int y) {
-
 		setWidth((Main.TILE_SIZE / 5) + 40);
 		setHeight(Main.TILE_SIZE / 10);
 		relocate(x * Main.TILE_SIZE, y * Main.TILE_SIZE);

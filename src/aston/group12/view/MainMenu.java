@@ -7,13 +7,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * The initial start point in the game.
+ *
+ */
 public class MainMenu extends Application implements GameScreen {
 	
 	
-	private Stage primaryStage;
 	private Scene scene;
 	
 	@Override
@@ -31,6 +34,10 @@ public class MainMenu extends Application implements GameScreen {
 		}
 	}
 	
+	/**
+	 * Gets the {@link Scene}.
+	 * @return
+	 */
 	public Scene getScene() {
 		return scene;
 	}

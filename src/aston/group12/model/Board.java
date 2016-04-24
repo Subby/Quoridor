@@ -1,8 +1,5 @@
 package aston.group12.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Represents a board filled with tiles.
  * @author Denver Fernandes

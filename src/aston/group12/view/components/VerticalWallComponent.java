@@ -3,7 +3,9 @@ package aston.group12.view.components;
 import aston.group12.view.Main;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-
+/**
+ * Represents a vertical wall component within the board using the {@link Rectangle} shape.
+ */
 public class VerticalWallComponent extends Rectangle {
 		
 	public VerticalWallComponent(int x, int y) {	

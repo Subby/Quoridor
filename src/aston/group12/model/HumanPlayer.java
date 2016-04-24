@@ -1,7 +1,7 @@
 package aston.group12.model;
 
 /**
- * This class creates a new Player object.
+ * This class creates a new Human Player object.
  * @author Xenia Vanikaki
  * @author Denver Fernandes
  * @version 0.3
