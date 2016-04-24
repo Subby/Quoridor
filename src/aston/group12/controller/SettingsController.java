@@ -3,6 +3,8 @@ package aston.group12.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import aston.group12.model.RuleType;
+import aston.group12.model.Settings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -63,7 +65,41 @@ public class SettingsController extends AbstractController implements Initializa
 	 */
 	@FXML
 	private void onSaveBtn() {
-
+		Settings settings = Settings.getSingleton();
+		System.out.println("Before:" + settings.getRuleType()); 
+		System.out.println("Before:" + settings.getWalls());
+		//Set rule setting
+		if(ruleBox.getValue() == "Standard") {
+			settings.setRuleType(RuleType.STANDARD);
+		} else {
+			settings.setRuleType(RuleType.CHALLENGE);
+		}
+		
+		//Set number of walls setting
+		settings.setWalls(wallBox.getValue());
+		//Set show label
+		settings.setShowLabels(indicateLabel.isSelected());
+		//Set show ghost trails
+		//settings.setShowTrail(ghostTrail.isSelected());
+		
+		//Set board height and width
+		switch(boardBox.getValue()) {
+		case "7x7":
+			break;
+		case "9x9":
+			break;
+		case "11x11:":
+			break;
+			default:
+				settings.setBoardHeight(9);
+				settings.setBoardWidth(9);
+				break;
+		}
+		//Set tile size
+		settings.setTileSize(tileBox.getValue());
+		
+		System.out.println("After:" + settings.getRuleType()); 
+		System.out.println("After:" + settings.getWalls()); 
 	}	
 	
 	@Override
