@@ -22,7 +22,7 @@ public class MainMenu extends Application implements GameScreen {
 			Parent root = FXMLLoader.load(getClass().getResource("layouts/mainmenu.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setTitle("Quoridor");
-			primaryStage.getIcons().add(new Image("res/icons/favicon.png"));
+			primaryStage.getIcons().add(new Image("resources/icons/favicon.png"));
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch (IOException e) {
