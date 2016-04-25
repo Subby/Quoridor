@@ -83,11 +83,16 @@ public class SettingsController extends AbstractController implements Initializa
 		//Set board height and width
 		switch(boardBox.getValue()) {
 		case "7x7":
+			settings.setBoardHeight(7);
+			settings.setBoardWidth(7);			
 			break;
 		case "9x9":
+			settings.setBoardHeight(9);
+			settings.setBoardWidth(9);			
 			break;
 		case "11x11:":
-			break;
+			settings.setBoardHeight(11);
+			settings.setBoardWidth(11);	
 			default:
 				settings.setBoardHeight(9);
 				settings.setBoardWidth(9);
