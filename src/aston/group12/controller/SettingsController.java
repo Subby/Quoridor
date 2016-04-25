@@ -66,8 +66,6 @@ public class SettingsController extends AbstractController implements Initializa
 	@FXML
 	private void onSaveBtn() {
 		Settings settings = Settings.getSingleton();
-		System.out.println("Before:" + settings.getRuleType()); 
-		System.out.println("Before:" + settings.getWalls());
 		//Set rule setting
 		if(ruleBox.getValue() == "Standard") {
 			settings.setRuleType(RuleType.STANDARD);
@@ -97,28 +95,33 @@ public class SettingsController extends AbstractController implements Initializa
 		}
 		//Set tile size
 		settings.setTileSize(tileBox.getValue());
-		
-		System.out.println("After:" + settings.getRuleType()); 
-		System.out.println("After:" + settings.getWalls()); 
 	}	
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		Settings settings = Settings.getSingleton();
+		
 		ObservableList<String> ruleList = FXCollections.observableArrayList("Standard", "Challenge");
-		ruleBox.setValue("Standard");
+		if(settings.getRuleType() == RuleType.STANDARD) {
+			ruleBox.setValue("Standard");
+		} else {
+			ruleBox.setValue("Challenge");
+		}
 		ruleBox.setItems(ruleList);	
 		
 		ObservableList<Integer> wallList = FXCollections.observableArrayList(8, 9, 10, 11, 12, 13, 14);
-		wallBox.setValue(10);
+		wallBox.setValue(settings.getWalls());
 		wallBox.setItems(wallList);
 		
 		ObservableList<String> boardList = FXCollections.observableArrayList("7x7", "9x9", "11x11");
-		boardBox.setValue("9x9");
+		boardBox.setValue(settings.getBoardHeight() + "x" + settings.getBoardWidth());
 		boardBox.setItems(boardList);
 		
 		ObservableList<Integer> tileList = FXCollections.observableArrayList(50, 60, 70, 80);
-		tileBox.setValue(50);
-		tileBox.setItems(tileList);				
+		tileBox.setValue(settings.getTileSize());
+		tileBox.setItems(tileList);		
+	
+		indicateLabel.setSelected(settings.isShowLabels());			
 	}	
    
 }
