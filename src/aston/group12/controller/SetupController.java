@@ -151,7 +151,6 @@ public class SetupController extends AbstractController implements Initializable
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		nameColumn.setCellValueFactory(new PropertyValueFactory<Player, String>("name"));
 		pawnColumn.setCellValueFactory(new PropertyValueFactory<Player, String>("pawnColour"));
-
 		pawnColumn.setCellFactory(column -> {
 	        return new TableCell<Player, String>() {
                 @Override
@@ -166,6 +165,7 @@ public class SetupController extends AbstractController implements Initializable
                 }
             };
 	    });
+		multiPlayerTable.setPlaceholder(new Label("No players yet"));
 		
 	}
 }
