@@ -12,6 +12,12 @@ public class Move {
 	private Player player;
 	
 	public Move(Tile from, Tile to, Player player) {
+		if(from == null || to == null) {
+			throw new IllegalArgumentException("The tile cannot be null");
+		}
+		if(player == null) {
+			throw new IllegalArgumentException("The player cannot be null");
+		}		
 		this.from = from;
 		this.to = to;
 		this.player = player;

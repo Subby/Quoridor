@@ -40,9 +40,13 @@ public class Board {
 	 * Gets a tile with a given coordinate.
 	 * @param x the x coordinate
 	 * @param y the y coordinate
+	 * @throws IllegalArgumentException if x or y is below 0
 	 * @return the tile
 	 */
 	public Tile getTile(int x, int y) {
+		if(x < 0 || y < 0) {
+			throw new IllegalArgumentException("The coordinate cannot be below 0.");
+		}
 		return tiles[x][y];
 	}
 	
@@ -50,9 +54,13 @@ public class Board {
 	/**
 	 * Checks whether the position on the {@link Board} contains a {@link Wall}.
 	 * @param position the position
-	 * @return the wall
+	 * @throws IllegalArgumentException if x or y is below 0
+	 * @return whether the wall is in the given position
 	 */
     public boolean containsWall(int x, int y, boolean isHorizontal) {
+    	if(x < 0 || y < 0) {
+    		throw new IllegalArgumentException("The corodinate cannot be below 0.");
+    	}
     	if(isHorizontal) {
     		if(horizontalWalls[x][y] != null) {
     			return true;
@@ -72,8 +80,17 @@ public class Board {
      * @param isHorizontal whether the wall is horizontal or not
      * @param isFirst whether the wall is the first part or not
      * @param placedBy who owns the wall
+     * @throws IllegalArgumentException if x or y is below 0
+     * @throws IllegalArgumentException if the player is null
      */
     public void setWall(int x, int y, boolean isHorizontal, boolean isFirst, Player placedBy) {
+    	if(x < 0 || y < 0) {
+    		throw new IllegalArgumentException("The corodinate cannot be below 0.");
+    	}
+    	if(placedBy == null) {
+    		throw new IllegalArgumentException("The player cannot be null.");
+    	}
+    	
         if(isHorizontal) {
         	horizontalWalls[x][y] = new Wall(x, y, isFirst, placedBy);
         } else {
@@ -86,9 +103,13 @@ public class Board {
      * @param x the x coordinate
      * @param y the y coordinate
      * @param isHorizontal whether the wall is horizontal
+     * @throws IllegalArgumentException if x or y is below 0
      * @return the wall
      */
     public Wall getWall(int x, int y, boolean isHorizontal) {
+    	if(x < 0 || y < 0) {
+    		throw new IllegalArgumentException("The corodinate cannot be below 0.");
+    	}    	
     	if(isHorizontal) {
     		return horizontalWalls[x][y];
     	} else {
@@ -96,7 +117,17 @@ public class Board {
     	}
     }
     
+    /**
+     * Removes a {@link Wall} given the x and y coordinate.
+     * @param x the x coordinate
+     * @param y the y coordinate
+     * @param isHorizontal whether the wall is horizontal
+     * @throws IllegalArgumentException if x or y is below 0
+     */
     public void removeWall(int x, int y, boolean isHorizontal) {
+    	if(x < 0 || y < 0) {
+    		throw new IllegalArgumentException("The corodinate cannot be below 0.");
+    	}        	
     	if(isHorizontal) {
     		horizontalWalls[x][y] = null;
     	} else {

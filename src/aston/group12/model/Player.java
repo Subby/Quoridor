@@ -47,6 +47,7 @@ public abstract class Player {
 	
 	/**
 	 * Decrements the number of walls that the player has by one.
+	 * @throws IllegalStateException if the number of walls is below 0
 	 */
 	public void decrementWalls() {
 		if(walls == 0) {
@@ -58,6 +59,7 @@ public abstract class Player {
 	
 	/**
 	 * Increments the number of walls that a player has by one.
+	 * @throws IllegalStateException if the number of walls are at maximum
 	 */
 	public void incrementWalls() {
 		if(walls == GameSession.STARTING_WALLS_NUM) {

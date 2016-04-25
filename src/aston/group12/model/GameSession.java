@@ -44,10 +44,14 @@ public class GameSession {
 	 * Adds a player to the session.
 	 * @param player the player to add
 	 * @throws IllegalStateException when more players than the limit are added
+	 * @throws IllegalArgumentException if the player is null
 	 */
 	public void addPlayer(Player player) {
 		if(players.size() > MAX_PLAYERS) {
 			throw new IllegalStateException("There can only be a maximum of " + MAX_PLAYERS + " players");
+		}
+		if(player == null) {
+			throw new IllegalArgumentException("The player cannot be null");
 		}
 		players.add(player);
 	}
@@ -76,7 +80,6 @@ public class GameSession {
 	 */
 	public boolean addMove(Move move) {
 		moves.push(move);
-		//TODO: Check for collisions etc.
 		return true;
 	}
 	
@@ -99,10 +102,14 @@ public class GameSession {
 	/**
 	 * Checks whether a move is valid.
 	 * @param current the current {@link Tile} the {@link Player} is at.
-	 * @param movingTo the {@link Tile} the {@link Player} wants to move to. 
+	 * @param movingTo the {@link Tile} the {@link Player} wants to move to.
+	 * @throws IllegalArgumentException if the tile is null 
 	 * @return whether the move is valid
 	 */
 	public boolean isValidMove(Tile current, Tile movingTo) {
+		if(current == null | movingTo == null) {
+			throw new IllegalArgumentException("The tile cannot be null.");
+		}
 		int currentX = current.getX();
 		int currentY = current.getY();
 		int nextX = movingTo.getX();

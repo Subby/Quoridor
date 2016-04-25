@@ -112,6 +112,9 @@ public class Settings {
 	 * @param boardWidth the width
 	 */
 	public void setBoardWidth(int boardWidth) {
+		if(boardWidth % 2 == 0) {
+			throw new IllegalArgumentException("The board width must be odd.");
+		}
 		this.boardWidth = boardWidth;
 	}
 
@@ -142,8 +145,12 @@ public class Settings {
 	/**
 	 * Sets the height of the {@link Board}
 	 * @param boardHeight the height
+	 * @throws IllegalArgumentException if the board height is event
 	 */
 	public void setBoardHeight(int boardHeight) {
+		if(boardHeight % 2 == 0) {
+			throw new IllegalArgumentException("The board height must be odd.");
+		}		
 		this.boardHeight = boardHeight;
 	}
 
