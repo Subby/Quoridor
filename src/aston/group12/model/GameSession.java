@@ -19,6 +19,8 @@ public class GameSession {
 	private Board board;
 	private List<Player> players;
 	private RuleType ruleType;
+	private Player winner;
+	
 	/**
 	 * A {@link Stack} was chosen to store all the moves as an undo function can be 
 	 * implemented in the practise mode. 
@@ -146,6 +148,22 @@ public class GameSession {
     		}
     	}
     	return false;
+	}	
+	
+	/**
+	 * Sets the winner for this {@link GameSession}.
+	 * @param player the winner
+	 */
+	public void setWinner(Player player) {
+		winner = player;
+	}
+	
+	/**
+	 * Gets the {@link Player} who won the match.
+	 * @return the winner
+	 */
+	public Player getWinner() {
+		return winner;
 	}	
 
 }
