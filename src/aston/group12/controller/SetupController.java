@@ -110,14 +110,12 @@ public class SetupController extends AbstractController implements Initializable
     	Node addButton = popup.getDialogPane().lookupButton(loginButtonType);
     	addButton.setDisable(true);
 
-    	// Do some validation (using the Java 8 lambda syntax).
     	name.textProperty().addListener((observable, oldValue, newValue) -> {
     	    addButton.setDisable(newValue.trim().isEmpty());
     	});
 
     	popup.getDialogPane().setContent(grid);
 
-    	// Request focus on the username field by default.
     	Platform.runLater(() -> name.requestFocus());
     	Optional<Pair<String, String>> result = popup.showAndWait();
     	String hexColor = convertColour(colorPicker);
