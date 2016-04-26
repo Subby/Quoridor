@@ -1,6 +1,7 @@
 package aston.group12.view;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,9 +17,11 @@ import aston.group12.view.components.VerticalWallComponent;
 import aston.group12.view.components.HorizontalWallComponent;
 import javafx.application.Application;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
@@ -94,15 +97,23 @@ public class Main extends Application {
     
     private Pane infoPanel() {
     	Pane panel = new Pane();
+    	Button button = new Button("Main Menu");
+    	button.setOnAction((e) -> {
+    		Stage stage = (Stage) button.getScene().getWindow();
+    		loadMainMenu(stage);
+    	});
+    	button.setTranslateY(150);
     	currentTurnLabel.setText(gameSession.getPlayer(turnIndex).getName() + "'s turn");
-    	currentTurnLabel.setTextFill(Color.valueOf(pawnTypes[turnIndex].getColour()));
+    	currentTurnLabel.setTextFill(Color.valueOf(gameSession.getPlayer(turnIndex).getPawnColour()));
     	currentTurnLabel.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
-    	wallsLabel.textProperty().bind(new SimpleIntegerProperty(gameSession.getPlayer(0).getWalls()).asString());
+    	wallsLabel.setText("Walls left: " + gameSession.getPlayer(turnIndex).getWalls());
+    	wallsLabel.setTextFill(Color.valueOf(gameSession.getPlayer(turnIndex).getPawnColour()));
     	wallsLabel.setTranslateY(50);
-    	panel.getChildren().addAll(currentTurnLabel, wallsLabel);
+    	panel.getChildren().addAll(currentTurnLabel, wallsLabel, button);
     	panel.setTranslateX(450);
     	return panel; 
     }
+    
     private Parent createContent() {
         Pane root = new Pane();
         root.setPrefSize((width * TILE_SIZE) + 75, height * TILE_SIZE);
@@ -425,6 +436,18 @@ public class Main extends Application {
 		currentTurnLabel.setTextFill(Color.valueOf(pawnTypes[turnIndex].getColour()));
     }
     
+    private void loadMainMenu(Stage primaryStage) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/layouts/mainmenu.fxml"));
+			Scene scene = new Scene(root);
+			primaryStage.setTitle("Quoridor");
+			primaryStage.getIcons().add(new Image("res/icons/favicon.png"));
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }  
     
     public static void main(String[] args) {
         launch(args);
