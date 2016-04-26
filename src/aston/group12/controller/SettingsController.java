@@ -58,6 +58,7 @@ public class SettingsController extends AbstractController implements Initializa
 		tileBox.setValue(50);
 		indicateLabel.setSelected(true);
 		//ghostTrail.setSelected(false);
+		Settings.getSingleton().reset();
 	}   
 	
 	/**
