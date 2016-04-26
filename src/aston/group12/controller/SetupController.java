@@ -4,9 +4,11 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import aston.group12.model.Board;
 import aston.group12.model.GameSession;
 import aston.group12.model.HumanPlayer;
 import aston.group12.model.Player;
+import aston.group12.model.Settings;
 import aston.group12.view.Main;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -70,7 +72,9 @@ public class SetupController extends AbstractController implements Initializable
     @FXML
     private void onPlayBtn(ActionEvent event) {
     	Stage stage = (Stage) multiPlayerPane.getScene().getWindow();
-    	Main main = new Main(stage);
+    	Board board = new Board(Settings.getSingleton().getBoardHeight(), Settings.getSingleton().getBoardWidth());
+    	GameSession gameSession = new GameSession(board, Settings.getSingleton().getRuleType());    	
+    	Main main = new Main(stage, gameSession, multiPlayerTable.getItems());
     	stage.show();
     }
     
