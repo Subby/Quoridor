@@ -127,8 +127,10 @@ public class SetupController extends AbstractController implements Initializable
     		addPlayerBtn.setDisable(true);
     	}
     	
-    	if(multiPlayerTable.getItems().size() >= 2) {
+    	if((multiPlayerTable.getItems().size() % 2 == 0)) {
     		playBtn.setDisable(false);
+    	} else {
+    		playBtn.setDisable(true);
     	}
     	
     } 
