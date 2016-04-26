@@ -22,6 +22,8 @@ public class Board {
 			throw new IllegalStateException("Height or width of the board cannot be even.");
 		}		
 		this.tiles = new Tile[height][width];
+		this.horizontalWalls = new Wall[height][width];
+		this.verticalWalls = new Wall[height][width];
 		this.height = height;
 		this.width = width;
 		this.height = height;
