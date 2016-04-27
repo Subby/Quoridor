@@ -36,14 +36,7 @@ public class PawnComponent extends StackPane {
 		this.type = type;
 		
 		move(x, y);
-		
-        /*Ellipse bg = new Ellipse(TILE_SIZE * 0.3125, TILE_SIZE * 0.26);
-        bg.setFill(Color.BLACK);
-        bg.setStrokeWidth(TILE_SIZE * 0.03);
-        
-        bg.setTranslateX((TILE_SIZE - TILE_SIZE * 0.3125) / 2);
-        bg.setTranslateY((TILE_SIZE - TILE_SIZE * 0.26 * 2) / 2 + TILE_SIZE * 0.07);*/        
-        
+		        
         Circle ellipse = new Circle(TILE_SIZE * 0.3215);
         ellipse.setFill(Color.web(colour));
         ellipse.setStroke(Color.BLACK);
@@ -83,24 +76,7 @@ public class PawnComponent extends StackPane {
 	}
 	
 	public enum PawnType {
-	    RED("#FF0000", Color.valueOf("#FF0000")), WHITE("#E6C700", Color.valueOf("#E6C700")), GREEN("#4E9600", Color.valueOf("#4E9600")), BLUE("#002FFF", Color.valueOf("#002FFF"));
-
-	    final String colour;
-	    final Color wallColour;
-	    
-	    PawnType(String colour, Color wallColour) {
-	        this.colour = colour;
-	        this.wallColour = wallColour;
-
-	    }
-	    
-	    public String getColour() {
-	    	return colour;
-	    }
-	    
-	    public Color getWallColour() {
-	    	return wallColour;
-	    }
+	    RED, WHITE, GREEN, BLUE;
 	}
 
 }
