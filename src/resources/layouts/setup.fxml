@@ -31,6 +31,7 @@
                               <Image url="@images/setup/4.png" />
                            </image>
                         </ImageView>
+                        <Button layoutX="14.0" layoutY="286.0" mnemonicParsing="false" onAction="#onBackBtn" text="Back" />
                      </children>
                   </AnchorPane>
               </content>
