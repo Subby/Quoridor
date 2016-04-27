@@ -1,9 +1,14 @@
 package aston.group12.model;
 
 import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
+
+/**
+ * Test class for Wall.java.
+ * @author Anas Khan
+ * @version 0.1
+ */
 
 public class WallTest {
 	
