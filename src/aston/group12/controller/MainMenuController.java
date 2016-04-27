@@ -23,7 +23,7 @@ public class MainMenuController extends AbstractController {
 	 * @param event the action
 	 */
     @FXML 
-    protected void onPlayBtnPress(ActionEvent event) {
+    private void onPlayBtnPress(ActionEvent event) {
     	Stage stage = (Stage) exitButton.getScene().getWindow();
     	loadScreen(stage, "setup.fxml");
     }
@@ -33,7 +33,7 @@ public class MainMenuController extends AbstractController {
 	 * @param event the action
      */
     @FXML 
-    protected void onHelpBtnPress(ActionEvent event) {
+    private void onHelpBtnPress(ActionEvent event) {
     	Stage stage = (Stage) exitButton.getScene().getWindow();
     	loadScreen(stage, "help.fxml");
     }  
@@ -43,7 +43,7 @@ public class MainMenuController extends AbstractController {
 	 * @param event the action
      */    
     @FXML 
-    protected void onSettingBtnPress(ActionEvent event) {
+    private void onSettingBtnPress(ActionEvent event) {
     	Stage stage = (Stage) exitButton.getScene().getWindow();
     	loadScreen(stage, "options.fxml");
     }
@@ -53,7 +53,7 @@ public class MainMenuController extends AbstractController {
 	 * @param event the action
      */    
     @FXML 
-    protected void onExitBtnPress(ActionEvent event) {
+    private void onExitBtnPress(ActionEvent event) {
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Exit Confirmation");
         alert.setHeaderText("Exit Quoridor");

@@ -168,7 +168,7 @@ public class SetupController extends AbstractController implements Initializable
      * Sets up a game with {@link Player players}
      * @param players the players
      */
-    public void setupGame(List<Player> players) {
+    private void setupGame(List<Player> players) {
     	Stage stage = (Stage) multiPlayerPane.getScene().getWindow();
     	Board board = new Board(Settings.getSingleton().getBoardHeight(), Settings.getSingleton().getBoardWidth());
     	GameSession gameSession = new GameSession(board, Settings.getSingleton().getRuleType());  
