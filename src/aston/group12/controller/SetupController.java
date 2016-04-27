@@ -143,8 +143,8 @@ public class SetupController extends AbstractController implements Initializable
     @FXML
     private void on2PlayerBtn(ActionEvent action) {
     	List<Player> players = new ArrayList<Player>(2);
-    	Player player1 = new HumanPlayer("Player1" , "#663366");
-    	Player player2 = new HumanPlayer("Player2" , "#b3e6b3");
+    	Player player1 = new HumanPlayer("1" , "#663366");
+    	Player player2 = new HumanPlayer("2" , "#b3e6b3");
     	players.add(player1);
     	players.add(player2);
     	setupGame(players);  	
@@ -153,10 +153,10 @@ public class SetupController extends AbstractController implements Initializable
     @FXML
     private void on4PlayerBtn(ActionEvent action) {
     	List<Player> players = new ArrayList<Player>(2);
-    	Player player1 = new HumanPlayer("Player1" , "#663366");
-    	Player player2 = new HumanPlayer("Player2" , "#b3e6b3");
-    	Player player3 = new HumanPlayer("Player3" , "#663366");
-    	Player player4 = new HumanPlayer("Player4" , "#b3e6b3");
+    	Player player1 = new HumanPlayer("1" , "#663366");
+    	Player player2 = new HumanPlayer("2" , "#b3e6b3");
+    	Player player3 = new HumanPlayer("3" , "#663366");
+    	Player player4 = new HumanPlayer("4" , "#b3e6b3");
     	players.add(player1);
     	players.add(player2);
     	players.add(player3);
