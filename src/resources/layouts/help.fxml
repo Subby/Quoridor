@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aston.group12.controller.HelpController">
+   <children>
+      <MediaView fx:id="videoView" fitHeight="300.0" fitWidth="300.0" layoutX="14.0" layoutY="86.0" />
+      <Button layoutX="518.0" layoutY="35.0" mnemonicParsing="false" onAction="#onBackBtn" text="Back" />
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="479.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/settings/arrow_left.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="262.0" layoutY="21.0" text="Help">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="96.0" fitWidth="142.0" layoutX="329.0" layoutY="86.0">
+         <image>
+            <Image url="@images/help/win_zone.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="87.0" fitWidth="142.0" layoutX="331.0" layoutY="193.0">
+         <image>
+            <Image url="@images/help/all_pos.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="96.0" fitWidth="142.0" layoutX="330.0" layoutY="290.0">
+         <image>
+            <Image url="@images/help/past_wall.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="479.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aim of the Game">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="480.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The aim of the game is to reach any of your oponent's far side tiles" wrappingWidth="117.56639194488525" />
+      <Text layoutX="480.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Movement">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="480.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pawns can only move up, down, left or right using the mouse" wrappingWidth="117.56638884544373" />
+      <Text layoutX="480.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Walls">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="481.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Walls can be placed by clicking a gap between tiles. No players can move past a wall" wrappingWidth="117.56639374606311" />
+   </children>
+</AnchorPane>
