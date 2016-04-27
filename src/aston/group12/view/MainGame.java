@@ -31,7 +31,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
-public class Main extends Application implements GameScreen {
+public class MainGame extends Application implements GameScreen {
 	public static final int TILE_SIZE = Settings.getSingleton().getTileSize();
 
     private List<PawnComponent> pawnComponentList = new ArrayList<PawnComponent>(GameSession.MAX_PLAYERS);
@@ -52,7 +52,7 @@ public class Main extends Application implements GameScreen {
     private Label wallsLabel;
     private Scene scene;
     
-    public Main(Stage stage, GameSession gameSession, List<Player> players) {
+    public MainGame(Stage stage, GameSession gameSession, List<Player> players) {
     	setupModel(gameSession, gameSession.getBoard(), players);
         currentTurnLabel = new Label();
         wallsLabel = new Label();

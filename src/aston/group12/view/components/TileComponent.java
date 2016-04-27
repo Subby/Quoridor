@@ -1,6 +1,6 @@
 package aston.group12.view.components;
 
-import aston.group12.view.Main;
+import aston.group12.view.MainGame;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -13,9 +13,9 @@ import javafx.scene.shape.Rectangle;
 public class TileComponent extends Rectangle {
         
 	public TileComponent(int x, int y) {
-		setWidth(Main.TILE_SIZE);
-		setHeight(Main.TILE_SIZE);
-		relocate(x * Main.TILE_SIZE, y * Main.TILE_SIZE);
+		setWidth(MainGame.TILE_SIZE);
+		setHeight(MainGame.TILE_SIZE);
+		relocate(x * MainGame.TILE_SIZE, y * MainGame.TILE_SIZE);
 		setFill(Color.valueOf("#ffffff"));
 	}
 	

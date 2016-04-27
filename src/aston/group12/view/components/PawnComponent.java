@@ -1,6 +1,6 @@
 package aston.group12.view.components;
 
-import static aston.group12.view.Main.TILE_SIZE;
+import static aston.group12.view.MainGame.TILE_SIZE;
 
 import aston.group12.model.Settings;
 import javafx.scene.layout.StackPane;

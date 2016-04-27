@@ -11,7 +11,7 @@ import aston.group12.model.GameSession;
 import aston.group12.model.HumanPlayer;
 import aston.group12.model.Player;
 import aston.group12.model.Settings;
-import aston.group12.view.Main;
+import aston.group12.view.MainGame;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -169,7 +169,7 @@ public class SetupController extends AbstractController implements Initializable
     	Stage stage = (Stage) multiPlayerPane.getScene().getWindow();
     	Board board = new Board(Settings.getSingleton().getBoardHeight(), Settings.getSingleton().getBoardWidth());
     	GameSession gameSession = new GameSession(board, Settings.getSingleton().getRuleType());  
-    	Main main = new Main(stage, gameSession, players);
+    	MainGame main = new MainGame(stage, gameSession, players);
     	stage.show();
     }
     
