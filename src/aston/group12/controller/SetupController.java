@@ -31,6 +31,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Pair;
 
@@ -54,6 +55,9 @@ public class SetupController extends AbstractController implements Initializable
 	private Button addPlayerBtn;
 	@FXML
 	private Button playBtn;
+	
+	private Color[] defaultColours;
+	private int colourIndex;	
 	
 	/**
 	 * Action triggered by pressing the back button.
@@ -99,7 +103,7 @@ public class SetupController extends AbstractController implements Initializable
 
     	TextField name = new TextField();
     	name.setPromptText("Name");
-    	ColorPicker colorPicker = new ColorPicker();
+    	ColorPicker colorPicker = new ColorPicker(defaultColours[colourIndex]);
     	colorPicker.setPromptText("Pawn colour");
 
     	grid.add(new Label("Name:"), 0, 0);
@@ -124,6 +128,7 @@ public class SetupController extends AbstractController implements Initializable
     		Player player = new HumanPlayer(name.getText(), hexColor);
     		System.out.println(hexColor);
     		multiPlayerTable.getItems().add(player);
+    		colourIndex++;
     	}
     	if(multiPlayerTable.getItems().size() == GameSession.MAX_PLAYERS) {
     		addPlayerBtn.setDisable(true);
@@ -170,6 +175,8 @@ public class SetupController extends AbstractController implements Initializable
             };
 	    });
 		multiPlayerTable.setPlaceholder(new Label("No players yet"));
+		defaultColours = new Color[]{Color.valueOf("#663366"), Color.valueOf("#b3e6b3"), Color.valueOf("#334db3"), Color.valueOf("#ff6666")};
+		colourIndex = 0;		
 		
 	}
 }
