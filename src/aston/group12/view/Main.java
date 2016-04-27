@@ -10,6 +10,7 @@ import aston.group12.model.GameSession;
 import aston.group12.model.Player;
 import aston.group12.model.RuleType;
 import aston.group12.model.Settings;
+import aston.group12.model.Statistics;
 import aston.group12.model.Tile;
 import aston.group12.view.components.HorizontalWallComponent;
 import aston.group12.view.components.PawnComponent;
@@ -17,7 +18,6 @@ import aston.group12.view.components.PawnComponent.PawnType;
 import aston.group12.view.components.TileComponent;
 import aston.group12.view.components.VerticalWallComponent;
 import javafx.application.Application;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
@@ -530,13 +530,6 @@ public class Main extends Application implements GameScreen {
 		wallsLabel.setText("Walls left: " + gameSession.getPlayer(turnIndex).getWalls());
 		wallsLabel.setTextFill(Color.valueOf(gameSession.getPlayer(turnIndex).getPawnColour()));
     }
-    
-    /**
-     * Gets the {@lik Scene}.
-     * @return the scene
-     */
-    public Scene getScene() {
-    	return scene;
-    }
+
     
 }

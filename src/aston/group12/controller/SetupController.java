@@ -13,8 +13,6 @@ import aston.group12.model.Player;
 import aston.group12.model.Settings;
 import aston.group12.view.Main;
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
