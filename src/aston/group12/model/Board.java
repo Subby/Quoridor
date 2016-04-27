@@ -28,8 +28,21 @@ public class Board {
 		this.width = width;
 		this.height = height;
 		this.width = width;
+		setTilePositions();
 	}
 
+	/**
+	 * Assigns coordinates to the {@link Tiles tiles}.
+	 */
+	public void setTilePositions() {
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                Tile tile = new Tile(x, y);
+                tiles[x][y] = tile;
+            }
+        }
+	}	
+	
 	/**
 	 * Gets a tile with a given coordinate.
 	 * @param x the x coordinate

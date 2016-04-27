@@ -10,6 +10,7 @@ public class Tile {
 	
 	private int x;
 	private int y;
+	private boolean containsPawn;
 
 	public Tile(int x, int y) {
 		this.x = x;
@@ -31,4 +32,20 @@ public class Tile {
 	public int getY() {
 		return y;
 	}
+	
+	/**
+	 * Sets whether this tile contains a pawn.
+	 * @param contains whether the tile contains a pawn
+	 */
+	public void setContainsPawn(boolean contains) {
+		this.containsPawn = contains;
+	}
+	
+	/**
+	 * Whether this this contains a pawn
+	 * @return
+	 */
+	public boolean containsPawn() {
+		return containsPawn;
+	}	
 }

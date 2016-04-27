@@ -384,7 +384,9 @@ public class Main extends Application implements GameScreen {
     		Tile nextTile = new Tile(newX, newY);
     		if(gameSession.isValidMove(currentTile, nextTile) && isCurrentTurn(type)) {
     			System.out.println(type + " x:" + newX + " y:" + newY);
-        		pawn.move(newX, newY);       		
+        		pawn.move(newX, newY);      
+        		gameSession.getBoard().getTile(currentTile.getX(), currentTile.getY()).setContainsPawn(false);
+        		gameSession.getBoard().getTile(nextTile.getX(), nextTile.getY()).setContainsPawn(true);        		
         		//Check if the pawn is in a winning position on the board
         		switch(type) {
         		case RED:

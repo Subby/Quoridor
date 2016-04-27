@@ -119,6 +119,9 @@ public class GameSession {
     	if(nextX >= board.getWidth() || nextY >= board.getHeight() || nextX < 0 || nextY < 0) { //Check if the new position is off the board
     		return false;
     	}		
+    	if(board.getTile(nextX, nextY).containsPawn()) {
+    		return false;
+    	} 
     	if(nextX == currentX) {
     		if(nextY == currentY - 1) { //going upwards
     			if(board.containsWall(currentX, currentY, true)) {
