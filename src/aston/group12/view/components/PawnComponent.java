@@ -11,7 +11,11 @@ import javafx.scene.text.Text;
 import static aston.group12.view.Main.TILE_SIZE;
 
 import aston.group12.model.Settings;
-
+/**
+ * Represents a Pawn within the main game screen.
+ * Adapted from <a href="https://github.com/AlmasB/FXTutorials/blob/master/src/com/almasb/checkers/Piece.java">AlmasB</a>.
+ *
+ */
 
 public class PawnComponent extends StackPane {
 	
