@@ -16,10 +16,7 @@ import javafx.stage.Stage;
  *
  */
 public class MainMenu extends Application implements GameScreen {
-	
-	
-	private Scene scene;
-	
+
 	@Override
 	public void start(Stage primaryStage){
 		try {
@@ -36,14 +33,7 @@ public class MainMenu extends Application implements GameScreen {
 			e.printStackTrace();
 		}
 	}
-	
-	/**
-	 * Gets the {@link Scene}.
-	 * @return
-	 */
-	public Scene getScene() {
-		return scene;
-	}
+
 	
 	public static void main(String... args) {
 		launch(args);
