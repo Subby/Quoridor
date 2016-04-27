@@ -34,7 +34,7 @@ public class Board {
 	/**
 	 * Assigns coordinates to the {@link Tiles tiles}.
 	 */
-	public void setTilePositions() {
+	private void setTilePositions() {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 Tile tile = new Tile(x, y);
