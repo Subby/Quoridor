@@ -11,6 +11,11 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 
+/**
+ * Handles actions that were made by the help view.
+ * @author Denver Fernandes
+ *
+ */
 public class HelpController extends AbstractController implements Initializable {
 	
 	@FXML

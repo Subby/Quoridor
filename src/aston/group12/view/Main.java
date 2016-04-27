@@ -72,6 +72,12 @@ public class Main extends Application implements GameScreen {
         primaryStage.show();        
     }
     
+    /**
+     * Sets up the model.
+     * @param gs the game session
+     * @param board the board
+     * @param players the player
+     */
     private void setupModel(GameSession gs, Board board, List<Player> players) {
     	Settings settings = Settings.getSingleton();
         gameSession = new GameSession(board, settings.getRuleType());
@@ -87,6 +93,11 @@ public class Main extends Application implements GameScreen {
         setupPawns();
         
     }
+    
+    /**
+     * Creates an information panel on the side of the board.
+     * @return the information panel
+     */
     private Pane infoPanel() {
     	Pane panel = new Pane();
     	Button button = new Button("Main Menu");
@@ -105,6 +116,11 @@ public class Main extends Application implements GameScreen {
     	panel.setTranslateX(450);
     	return panel; 
     }
+    
+    /**
+     * Creates the main board content.
+     * @return the content
+     */
     private Parent createContent() {
         Pane root = new Pane();
         root.setPrefSize((width * TILE_SIZE) + 85, height * TILE_SIZE);
@@ -327,10 +343,20 @@ public class Main extends Application implements GameScreen {
         return root;
     }
 
+    /**
+     * Converts a pixel on the board to a coordinate.
+     * @param pixel the pixel
+     * @return a coordinate
+     */
     private int toBoard(double pixel) {
         return (int)(pixel + TILE_SIZE / 2) / TILE_SIZE;
     }
     
+    /**
+     * Determines whether it is the current {@link Player player's} turn.
+     * @param type the type of pawn
+     * @return whether it is the the current turn
+     */
     private boolean isCurrentTurn(PawnType type) {
     	if(pawnTypes[turnIndex] == type) {
     		return true;
@@ -339,6 +365,15 @@ public class Main extends Application implements GameScreen {
     	return false;
     }
     
+    /**
+     * Creates a new {@link PawnComponent}.
+     * @param type the pawn type
+     * @param x the starting x coordinate
+     * @param y the starting y coordinate
+     * @param name the name to display
+     * @param colour the colour of the pawn
+     * @return the pawn component
+     */
     private PawnComponent makePawn(PawnType type, int x, int y, String name, String colour) {
     	PawnComponent pawn = new PawnComponent(type, x, y, name, colour);
     	
@@ -414,6 +449,9 @@ public class Main extends Application implements GameScreen {
     	return pawn;
     }
     
+    /**
+     * Sets up all the pawns in the game.
+     */
     public void setupPawns() {
         int currentIndex = 0;
         int xStartingPositions[] = null;
@@ -436,6 +474,10 @@ public class Main extends Application implements GameScreen {
         }
     }
     
+    /**
+     * Ends the game and displays the {@link Statistics}.
+     * @param gs the game session
+     */
     private void endGame(GameSession gs) {
 		try {
 			Stage stage = (Stage) tileGroup.getScene().getWindow();
@@ -452,6 +494,10 @@ public class Main extends Application implements GameScreen {
 		}
     }
     
+    /**
+     * Loads the main menu. 
+     * @param primaryStage the stage
+     */
     private void loadMainMenu(Stage primaryStage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("resources/layouts/mainmenu.fxml"));
@@ -465,6 +511,9 @@ public class Main extends Application implements GameScreen {
 		}
     }    
     
+    /**
+     * Updates the turn and updates appropriate labels.
+     */
     private void updateTurn() {
     	gameSession.getPlayer(turnIndex).getStatistics().incrementTotalMoves();
 		if(turnIndex < gameSession.getPlayers().size() - 1) {
@@ -480,6 +529,10 @@ public class Main extends Application implements GameScreen {
 		wallsLabel.setTextFill(Color.valueOf(gameSession.getPlayer(turnIndex).getPawnColour()));
     }
     
+    /**
+     * Gets the {@lik Scene}.
+     * @return the scene
+     */
     public Scene getScene() {
     	return scene;
     }
