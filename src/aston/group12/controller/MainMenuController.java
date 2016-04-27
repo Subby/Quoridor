@@ -34,7 +34,8 @@ public class MainMenuController extends AbstractController {
      */
     @FXML 
     protected void onHelpBtnPress(ActionEvent event) {
-    	System.out.println("Help");
+    	Stage stage = (Stage) exitButton.getScene().getWindow();
+    	loadScreen(stage, "help.fxml");
     }  
     
     /**
