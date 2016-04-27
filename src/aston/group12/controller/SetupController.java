@@ -44,7 +44,6 @@ import javafx.util.Pair;
  */
 public class SetupController extends AbstractController implements Initializable {
 	
-	private ObservableList<Player> playerData = FXCollections.observableArrayList();
 	@FXML
 	private TableView<Player> multiPlayerTable;
 	@FXML
