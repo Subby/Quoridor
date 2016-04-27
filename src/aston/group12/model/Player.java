@@ -23,7 +23,7 @@ public abstract class Player {
 		
 		//Initialise values.
 		this.name = name;
-		walls = GameSession.STARTING_WALLS_NUM;
+		walls = Settings.getSingleton().getWalls();
 		this.stats = new Statistics();
 		this.pawnColour = pawnColour;
 	}
@@ -62,7 +62,7 @@ public abstract class Player {
 	 * @throws IllegalStateException if the number of walls are at maximum
 	 */
 	public void incrementWalls() {
-		if(walls == GameSession.STARTING_WALLS_NUM) {
+		if(walls == Settings.getSingleton().getWalls()) {
 			throw new IllegalStateException("The number of walls are already at maximum.");
 		}
 		walls++;
