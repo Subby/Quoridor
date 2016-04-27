@@ -21,16 +21,19 @@ public class HelpController extends AbstractController implements Initializable 
 	@FXML
 	private MediaView videoView;
 	
-	
+	/**
+	 * Handles response to on back button action.
+	 * @param action
+	 */
 	@FXML
-	public void onBackBtn(ActionEvent action) {
+	private void onBackBtn(ActionEvent action) {
 		Stage stage = (Stage) videoView.getScene().getWindow();
 		loadScreen(stage, "mainmenu.fxml");
 	}
 
 
 	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+	public void initialize(URL url, ResourceBundle rb) {
 		MediaPlayer mp = new MediaPlayer(new Media(getClass().getResource("/resources/video.mp4").toString()));
 		videoView.setMediaPlayer(mp);
 		videoView.getMediaPlayer().play();
