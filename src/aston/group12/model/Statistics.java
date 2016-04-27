@@ -8,8 +8,12 @@ package aston.group12.model;
 public class Statistics {
 	
 	private int numOfTotalMoves;
+	private int numOfWallsUsed;
 	
 	public Statistics() {
+		numOfTotalMoves = 0;
+		numOfWallsUsed = 0;
+		
 	}
 	
 	/**
@@ -25,6 +29,21 @@ public class Statistics {
 	 */
 	public int getTotalMoves() {
 		return numOfTotalMoves;
+	}
+
+	/**
+	 * Gets the number of {@link Wall walls} used.
+	 * @return the number of walls used
+	 */
+	public int getNumOfWallsUsed() {
+		return numOfWallsUsed;
+	}
+
+	/**
+	 * Increments the number of {@link Wall walls} used.
+	 */
+	public void incrementWallsUsed() {
+		numOfWallsUsed++;
 	}
 	
 }
