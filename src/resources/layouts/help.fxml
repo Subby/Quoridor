@@ -55,6 +55,5 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text layoutX="481.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Walls can be placed by clicking a gap between tiles. No players can move past a wall" wrappingWidth="117.56639374606311" />
-   </children>
+      <Text layoutX="456.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Walls can be placed by clicking a gap between tiles. No players can move past a wall. Using 'Challenge' rules, players can remove oponnents walls by right clicking their walls" wrappingWidth="141.99999514222145">   </children>
 </AnchorPane>
