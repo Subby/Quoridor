@@ -35,7 +35,6 @@ public class HelpController extends AbstractController implements Initializable 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		MediaPlayer mp = new MediaPlayer(new Media("http://www13.zippyshare.com/d/LvWXB7f2/9022063/video.mp4"));
-		System.out.println(getClass().getResource("/resources/video.mp4").toString());
 		videoView.setMediaPlayer(mp);
 		videoView.getMediaPlayer().play();
 		
