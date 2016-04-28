@@ -23,37 +23,47 @@
             <Font size="37.0" />
          </font>
       </Label>
-      <ImageView fitHeight="96.0" fitWidth="142.0" layoutX="329.0" layoutY="86.0">
+      <ImageView fitHeight="87.0" fitWidth="134.0" layoutX="319.0" layoutY="86.0">
          <image>
             <Image url="@/resources/layouts/images/help/win_zone.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="87.0" fitWidth="142.0" layoutX="331.0" layoutY="193.0">
+      <ImageView fitHeight="76.0" fitWidth="134.0" layoutX="320.0" layoutY="181.0">
          <image>
             <Image url="@/resources/layouts/images/help/all_pos.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="96.0" fitWidth="142.0" layoutX="330.0" layoutY="290.0">
+      <ImageView fitHeight="87.0" fitWidth="134.0" layoutX="319.0" layoutY="268.0">
          <image>
             <Image url="@/resources/layouts/images/help/past_wall.png" />
          </image>
       </ImageView>
-      <Text layoutX="479.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aim of the Game">
+      <Text layoutX="456.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aim of the Game">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text layoutX="480.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The aim of the game is to reach any of your oponent's far side tiles" wrappingWidth="117.56639194488525" />
-      <Text layoutX="480.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Movement">
+      <Text layoutX="456.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The aim of the game is to reach any of your oponent's far side tiles" wrappingWidth="133.99999737739563">
+         <font>
+            <Font size="11.0" />
+         </font></Text>
+      <Text layoutX="457.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Movement">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text layoutX="480.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pawns can only move up, down, left or right using the mouse" wrappingWidth="117.56638884544373" />
-      <Text layoutX="480.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Walls">
+      <Text layoutX="456.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pawns can only move up, down, left or right using the mouse" wrappingWidth="133.99999514222145">
+         <font>
+            <Font size="11.0" />
+         </font></Text>
+      <Text layoutX="455.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Walls">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text layoutX="456.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Walls can be placed by clicking a gap between tiles. No players can move past a wall. Using 'Challenge' rules, players can remove oponnents walls by right clicking their walls" wrappingWidth="141.99999514222145">   </children>
+      <Text layoutX="456.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Walls can be placed by clicking a gap between tiles. No players can move past a wall. Using 'Challenge' rules, players can remove oponnents walls by right clicking their walls" wrappingWidth="141.99999514222145">
+         <font>
+            <Font size="11.0" />
+         </font></Text>
+   </children>
 </AnchorPane>
