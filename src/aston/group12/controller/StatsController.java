@@ -13,10 +13,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import javafx.util.Pair;
 
 public class StatsController extends AbstractController implements Initializable {
@@ -24,13 +27,7 @@ public class StatsController extends AbstractController implements Initializable
 	@FXML
 	private Label winnerLabel;
 	@FXML
-	private TableView<Statistics> statsTable;
-	@FXML
-	private TableColumn<Player, String> playerColumn;
-	@FXML
-	private TableColumn<Statistics, Integer> movesColumn;
-	@FXML
-	private TableColumn<Statistics, Integer> wallsColumn;	
+	private TextArea statsArea;
 	
 	private GameSession gameSession;
 	
@@ -43,14 +40,18 @@ public class StatsController extends AbstractController implements Initializable
 	public void setGameSession(GameSession gs) {
 		this.gameSession = gs;
 		winnerLabel.setText(gameSession.getWinner().getName() + " won!");
-		statsTable.getItems().add(gs.getPlayer(0).getStatistics());
+		for(Player p : gs.getPlayers()) {
+			statsArea.appendText("---------- \n");	
+			statsArea.appendText(p.getName() + "'s stats \n");
+			statsArea.appendText("Walls used: " + p.getStatistics().getNumOfWallsUsed() + "\n");	
+			statsArea.appendText("Total moves: " + p.getStatistics().getTotalMoves() + "\n");
+			statsArea.appendText("---------- \n");				
+		}
 	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		//playerColumn.setCellValueFactory(new PropertyValueFactory<Player, String>("name"));
-		movesColumn.setCellValueFactory(new PropertyValueFactory<Statistics, Integer>("numOfTotalMoves"));
-		wallsColumn.setCellValueFactory(new PropertyValueFactory<Statistics, Integer>("wallsUsed"));
+		
 	}
 	
 }
