@@ -15,49 +15,51 @@ public class BoardTest {
 	
 	private Board board;
 	private Tile[][] tiles;
-	/*private Wall[][] horizontalWalls;
-	private Wall[][] verticalWalls;
-	private int height;
-	private int width;*/
+	private Player player;
 
 	@Before
 	public void setUp() throws Exception {
-		board = new Board();
+		board = new Board(9,9);
+		player = new HumanPlayer("Alberto Del Rio", "#ffffff");
 	}
 
 	@Test
 	public void testGetTile() {
-		assertEquals(tiles[3][4], board.getTile(3,4));
+		assertNotNull(board.getTile(3,4));
 	}
 
 	@Test
 	public void testContainsWall() {
-		
+		board.setWall(5, 4, true, true, player);
+		assertTrue(board.containsWall(5, 4, true));
 	}
 
 	@Test
 	public void testSetWall() {
-		fail("Not yet implemented");
+		board.setWall(8, 5, false, true, player);
+		assertTrue(board.containsWall(8, 5, false));
 	}
 
 	@Test
 	public void testGetWall() {
-		fail("Not yet implemented");
+		board.setWall(8, 5, false, true, player);
+		assertTrue(board.containsWall(8, 5, false));
 	}
 
 	@Test
 	public void testRemoveWall() {
-		fail("Not yet implemented");
+		board.setWall(3, 2, true, true, player);
+		board.removeWall(3, 2, true);
 	}
 
 	@Test
 	public void testGetHeight() {
-		fail("Not yet implemented");
+		assertEquals(9, board.getHeight());
 	}
 
 	@Test
 	public void testGetWidth() {
-		fail("Not yet implemented");
+		assertEquals(9, board.getWidth());
 	}
 
 }
