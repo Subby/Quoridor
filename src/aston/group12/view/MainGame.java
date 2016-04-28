@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import aston.group12.controller.StatsController;
 import aston.group12.model.Board;
 import aston.group12.model.GameSession;
 import aston.group12.model.Player;
@@ -485,8 +486,8 @@ public class MainGame extends Application implements GameScreen {
 			Stage stage = (Stage) tileGroup.getScene().getWindow();
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/layouts/stats.fxml"));
 			Scene scene = new Scene((Parent)loader.load());
-			//StatsController controller = loader.<StatsController>getController();
-			//controller.setGameSession(gs);			
+			StatsController controller = loader.<StatsController>getController();
+			controller.setGameSession(gs);			
 			stage.setTitle("Quoridor");
 			stage.getIcons().add(new Image("resources/icons/favicon.png"));
 			stage.setScene(scene);
