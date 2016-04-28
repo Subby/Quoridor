@@ -152,8 +152,8 @@ public class SetupController extends AbstractController implements Initializable
     	List<Player> players = new ArrayList<Player>(2);
     	Player player1 = new HumanPlayer("1" , "#663366");
     	Player player2 = new HumanPlayer("2" , "#b3e6b3");
-    	Player player3 = new HumanPlayer("3" , "#663366");
-    	Player player4 = new HumanPlayer("4" , "#b3e6b3");
+    	Player player3 = new HumanPlayer("3" , "#334db3");
+    	Player player4 = new HumanPlayer("4" , "#ff6666");
     	players.add(player1);
     	players.add(player2);
     	players.add(player3);
