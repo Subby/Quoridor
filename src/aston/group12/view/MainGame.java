@@ -198,9 +198,9 @@ public class MainGame extends Application implements GameScreen {
         					verticalWalls[nextWallX][nextWallY].setFill(Color.valueOf(gameSession.getPlayer(turnIndex).getPawnColour()));
                         	System.out.println("2. Wall placed at: X" + nextWallX + " " + nextWallY);
         				}
-        				//gameSession.getPlayer(turnIndex).getStatistics().incrementWallsUsed();
+        				gameSession.getPlayer(turnIndex).getStatistics().incrementWallsUsed();
         				gameSession.getPlayer(turnIndex).decrementWalls();
-        				updateTurn();
+        				updateTurn();  
                 	} else if(e.isSecondaryButtonDown()) {
         				if(gameSession.getRuleType() == RuleType.CHALLENGE) {
         					if(!gameSession.getBoard().containsWall(thisX, thisY, false)) {
@@ -300,9 +300,9 @@ public class MainGame extends Application implements GameScreen {
         					horizontalWalls[nextWallX][nextWallY].setFill(Color.valueOf(gameSession.getPlayer(turnIndex).getPawnColour()));
                         	System.out.println("2. Wall placed at: X" + nextWallX + " " + nextWallY);
         				}
-        				//gameSession.getPlayer(turnIndex).getStatistics().incrementWallsUsed();
+        				gameSession.getPlayer(turnIndex).getStatistics().incrementWallsUsed();
         				gameSession.getPlayer(turnIndex).decrementWalls();
-        				updateTurn();        				
+        				updateTurn();       				
         			} else if(e.isSecondaryButtonDown()) {
         				if(gameSession.getRuleType() == RuleType.CHALLENGE) {
         					if(!gameSession.getBoard().containsWall(thisX, thisY, true)) {
