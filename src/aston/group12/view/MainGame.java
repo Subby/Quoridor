@@ -483,7 +483,7 @@ public class MainGame extends Application implements GameScreen {
     private void endGame(GameSession gs) {
 		try {
 			Stage stage = (Stage) tileGroup.getScene().getWindow();
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/layouts/stats.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/layouts/stats.fxml"));
 			Scene scene = new Scene((Parent)loader.load());
 			//StatsController controller = loader.<StatsController>getController();
 			//controller.setGameSession(gs);			
