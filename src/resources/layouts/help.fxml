@@ -11,6 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aston.group12.controller.HelpController">
    <children>
+      <Label layoutX="93.0" layoutY="211.0" prefHeight="17.0" prefWidth="116.0" text="Video loading..." />
       <MediaView fx:id="videoView" fitHeight="300.0" fitWidth="300.0" layoutX="14.0" layoutY="86.0" />
       <Button layoutX="518.0" layoutY="35.0" mnemonicParsing="false" onAction="#onBackBtn" text="Back" />
       <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="479.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
