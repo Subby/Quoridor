@@ -15,7 +15,7 @@
       <Button layoutX="518.0" layoutY="35.0" mnemonicParsing="false" onAction="#onBackBtn" text="Back" />
       <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="479.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/settings/arrow_left.png" />
+            <Image url="@/resources/layouts/images/settings/arrow_left.png" />
          </image>
       </ImageView>
       <Label layoutX="262.0" layoutY="21.0" text="Help">
@@ -25,17 +25,17 @@
       </Label>
       <ImageView fitHeight="96.0" fitWidth="142.0" layoutX="329.0" layoutY="86.0">
          <image>
-            <Image url="@images/help/win_zone.png" />
+            <Image url="@/resources/layouts/images/help/win_zone.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="87.0" fitWidth="142.0" layoutX="331.0" layoutY="193.0">
          <image>
-            <Image url="@images/help/all_pos.png" />
+            <Image url="@/resources/layouts/images/help/all_pos.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="96.0" fitWidth="142.0" layoutX="330.0" layoutY="290.0">
          <image>
-            <Image url="@images/help/past_wall.png" />
+            <Image url="@/resources/layouts/images/help/past_wall.png" />
          </image>
       </ImageView>
       <Text layoutX="479.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aim of the Game">

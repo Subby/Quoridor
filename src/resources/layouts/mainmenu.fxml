@@ -12,7 +12,7 @@
          <children>
             <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/main/icon.png" />
+                  <Image url="@/resources/layouts/images/main/icon.png" />
                </image>
             </ImageView>
             <Button layoutX="118.0" layoutY="134.0" mnemonicParsing="false" onAction="#onPlayBtnPress" prefHeight="40.0" prefWidth="125.0" style="-fx-background-image: url('images\main\control_play_blue.png');" text="Play" />
@@ -21,22 +21,22 @@
             <Button fx:id="exitButton" layoutX="118.0" layoutY="276.0" mnemonicParsing="false" onAction="#onExitBtnPress" prefHeight="40.0" prefWidth="125.0" text="Exit" />
             <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="135.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/main/setting_tools.png" />
+                  <Image url="@/resources/layouts/images/main/setting_tools.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="131.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/main/control_play_blue.png" />
+                  <Image url="@/resources/layouts/images/main/control_play_blue.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="131.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/main/door_open.png" />
+                  <Image url="@/resources/layouts/images/main/door_open.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="131.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/main/question.png" />
+                  <Image url="@/resources/layouts/images/main/question.png" />
                </image>
             </ImageView>
          </children>

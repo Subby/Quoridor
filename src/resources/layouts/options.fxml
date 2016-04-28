@@ -49,17 +49,17 @@
                         <CheckBox disable="true" layoutX="495.0" layoutY="136.0" mnemonicParsing="false" text="Enabled" />
                         <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="14.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/settings/red_line.png" />
+                              <Image url="@/resources/layouts/images/settings/red_line.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="519.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/settings/accept_button.png" />
+                              <Image url="@/resources/layouts/images/settings/accept_button.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="21.0" layoutY="23.0">
                            <image>
-                              <Image url="@images/settings/main_opts.png" />
+                              <Image url="@/resources/layouts/images/settings/main_opts.png" />
                            </image>
                         </ImageView>
                         <Ellipse fill="RED" layoutX="309.0" layoutY="120.0" radiusX="9.0" radiusY="9.0" stroke="#f20101" strokeType="INSIDE" />
@@ -69,7 +69,7 @@
                         <ChoiceBox fx:id="ruleBox" layoutX="31.0" layoutY="139.0" prefHeight="18.0" prefWidth="85.0" />
                         <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="6.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/settings/panel.png" />
+                              <Image url="@/resources/layouts/images/settings/panel.png" />
                            </image>
                         </ImageView>
                         <ChoiceBox fx:id="wallBox" layoutX="172.0" layoutY="139.0" prefHeight="18.0" prefWidth="85.0" />
@@ -91,27 +91,27 @@
                         <Text layoutX="203.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board Size" />
                         <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="14.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/settings/red_line.png" />
+                              <Image url="@/resources/layouts/images/settings/red_line.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="519.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/settings/accept_button.png" />
+                              <Image url="@/resources/layouts/images/settings/accept_button.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="172.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/settings/board_game.png" />
+                              <Image url="@/resources/layouts/images/settings/board_game.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="327.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/settings/large_tiles.png" />
+                              <Image url="@/resources/layouts/images/settings/large_tiles.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="62.0" fitWidth="78.0" layoutX="15.0" layoutY="20.0">
                            <image>
-                              <Image url="@images/settings/adv_opts.png" />
+                              <Image url="@/resources/layouts/images/settings/adv_opts.png" />
                            </image>
                         </ImageView>
                         <Text layoutX="349.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tile Size" />
@@ -137,13 +137,13 @@
             </Text>
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="486.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/settings/arrow_left.png" />
+                  <Image url="@/resources/layouts/images/settings/arrow_left.png" />
                </image>
             </ImageView>
             <Button layoutX="527.0" layoutY="37.0" mnemonicParsing="false" onAction="#onBackBtn" text="Back" />
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="28.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/main/setting_tools.png" />
+                  <Image url="@/resources/layouts/images/main/setting_tools.png" />
                </image>
             </ImageView>
          </children>

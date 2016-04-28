@@ -23,12 +23,12 @@
                         <Button layoutX="226.0" layoutY="163.0" mnemonicParsing="false" onAction="#on4PlayerBtn" prefHeight="73.0" prefWidth="135.0" text="4 Player Game" />
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="177.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/setup/2.png" />
+                              <Image url="@/resources/layouts/images/setup/2.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="177.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/setup/4.png" />
+                              <Image url="@/resources/layouts/images/setup/4.png" />
                            </image>
                         </ImageView>
                         <Button layoutX="14.0" layoutY="286.0" mnemonicParsing="false" onAction="#onBackBtn" text="Back" />
