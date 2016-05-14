@@ -1,6 +1,6 @@
 Quoridor
 ===================
-This application was written as part of a university group project. The aim of the project was to provide a client with a software implementation of the startegy board game [Quoridor](https://en.wikipedia.org/wiki/Quoridor). The aim was accomplished using Java 8 (JavaFX and FXML). 
+This application was written as part of a university group project. The aim of the project was to provide a client with a software implementation of the startegy board game [Quoridor](https://en.wikipedia.org/wiki/Quoridor). The aim was accomplished using Java 8 (JavaFX and FXML). A executable version of the game can be found [here](https://github.com/Subby/Quoridor/releases/tag/v5.0).
 
 Group members were as follows:
 
