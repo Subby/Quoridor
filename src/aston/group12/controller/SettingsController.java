@@ -91,7 +91,7 @@ public class SettingsController extends AbstractController implements Initializa
 			settings.setBoardHeight(9);
 			settings.setBoardWidth(9);			
 			break;
-		case "11x11:":
+		case "11x11":
 			settings.setBoardHeight(11);
 			settings.setBoardWidth(11);	
 			break;
