@@ -106,6 +106,7 @@ public class MainGame extends Application implements GameScreen {
     		Stage stage = (Stage) button.getScene().getWindow();
     		loadMainMenu(stage);
     	});
+    	int offset = Settings.getSingleton().getBoardWidth();
     	button.setTranslateY(150);
     	currentTurnLabel.setText(gameSession.getPlayer(turnIndex).getName() + "'s turn");
     	currentTurnLabel.setTextFill(Color.valueOf(gameSession.getPlayer(turnIndex).getPawnColour()));
@@ -114,7 +115,13 @@ public class MainGame extends Application implements GameScreen {
     	wallsLabel.setTextFill(Color.valueOf(gameSession.getPlayer(turnIndex).getPawnColour()));
     	wallsLabel.setTranslateY(50);
     	panel.getChildren().addAll(currentTurnLabel, wallsLabel, button);
-    	panel.setTranslateX(450);
+    	if(offset == 7) {
+    		panel.setTranslateX(350);
+    	} else if(offset == 11) {
+    		panel.setTranslateX(550);
+    	} else {
+    		panel.setTranslateX(450);
+    	}
     	return panel; 
     }
     
